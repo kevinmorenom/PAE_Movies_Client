@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "PAE-Movies-Client"
+    }
+  },
+  "defaultProject": "PAE-Movies-Client",
+  "cli": {
+    "analytics": "7d4e3c42-2406-4981-9253-ca5c1257bba6"
+  }
 }
