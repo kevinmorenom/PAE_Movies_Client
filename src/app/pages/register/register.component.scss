@@ -3,4 +3,19 @@
 //NavBar
 #NavBar {
   font-family: 'Heebo';
+  position: fixed;
+  top: 0;
+  width: 100%;
+
+  #Titulo{
+    font-weight: bold;
+    letter-spacing: 2px;
+  }
+  #loginBtns{
+    margin-left: 530px;
+    #inputLogin{
+      width: 310px;
+    }
+  }
+  
 }

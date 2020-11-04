@@ -1,2 +1,16 @@
 //Style for NavBar
+#navBar {
+  font-family: 'Heebo';
+  position: fixed;
+  top: 0;
+  width: 100%;
 
+  #Titulo{
+    font-weight: bold;
+    letter-spacing: 2px;
+  }
+ 
+  #navBar-btns{
+      margin-left: 1000px;
+  }
+}

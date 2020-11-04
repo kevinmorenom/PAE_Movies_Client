@@ -9,6 +9,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { RegisterComponent } from './pages/register/register.component';
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterModalComponent } from './global/components/register-modal/register-modal.component';
+import { HomeComponent } from './pages/home/home.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { RegisterModalComponent } from './global/components/register-modal/regis
     FooterComponent,
     RegisterComponent,
     LoginComponent,
-    RegisterModalComponent
+    RegisterModalComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
