@@ -11,6 +11,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { RegisterModalComponent } from './global/components/register-modal/register-modal.component';
 import { HomeComponent } from './pages/home/home.component';
 import { Page404Component } from './pages/page404/page404.component';
+import { MovieCardComponent } from './global/components/movie-card/movie-card.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { Page404Component } from './pages/page404/page404.component';
     LoginComponent,
     RegisterModalComponent,
     HomeComponent,
-    Page404Component
+    Page404Component,
+    MovieCardComponent
   ],
   imports: [
     BrowserModule,
