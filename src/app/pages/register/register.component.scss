@@ -1,0 +1,46 @@
+//Style for the register
+
+//NavBar
+#NavBar {
+  background-color: gray;
+}
+
+
+//Content
+.container {
+  margin-bottom: 51px;
+
+  #registerContent {
+    margin-top: 60px;
+
+    #Texts {
+      margin-top: 150px;
+    }
+
+    .BigText {
+      font-size: 30px;
+    }
+
+    .SmallText {
+      font-size: 18px;
+    }
+
+
+    #registerContainer {
+      box-shadow: 8px 8px 16px #c2c2c2,
+        -8px -8px 16px #ffffff;
+      width: 100%;
+      background-color: #fff;
+      border-radius: 25px;
+
+      #submitBtn {
+        width: 100%;
+        margin-bottom: 15px;
+      }
+
+      >div {
+        text-align: center;
+      }
+    }
+  }
+}
