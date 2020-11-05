@@ -13,6 +13,9 @@ import { HomeComponent } from './pages/home/home.component';
 import { Page404Component } from './pages/page404/page404.component';
 import { MovieCardComponent } from './global/components/movie-card/movie-card.component';
 import { MyProfileComponent } from './pages/my-profile/my-profile.component';
+import { ProfileInfoComponent } from './global/components/profile-info/profile-info.component';
+import { TowatchComponent } from './global/components/towatch/towatch.component';
+import { ViewedComponent } from './global/components/viewed/viewed.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +28,10 @@ import { MyProfileComponent } from './pages/my-profile/my-profile.component';
     HomeComponent,
     Page404Component,
     MovieCardComponent,
-    MyProfileComponent
+    MyProfileComponent,
+    ProfileInfoComponent,
+    TowatchComponent,
+    ViewedComponent
   ],
   imports: [
     BrowserModule,
