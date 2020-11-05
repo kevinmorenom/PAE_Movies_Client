@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -19,7 +20,7 @@ import { WatchedMovieComponent } from './global/components/watched-movie/watched
 import { ToWatchMovieComponent } from './global/components/to-watch-movie/to-watch-movie.component';
 import { WatchedComponent } from './global/components/watched/watched.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NotificatioTableComponent } from './global/components/notificatio-table/notificatio-table.component';
+import { NotificationTableComponent } from './global/components/notification-table/notification-table.component';
 
 @NgModule({
   declarations: [
@@ -38,13 +39,14 @@ import { NotificatioTableComponent } from './global/components/notificatio-table
     WatchedMovieComponent,
     ToWatchMovieComponent,
     WatchedComponent,
-    NotificatioTableComponent
+    NotificationTableComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

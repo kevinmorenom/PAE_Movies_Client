@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { NotificatioTableComponent } from './notificatio-table.component';
+import { NotificationTableComponent } from './notification-table.component';
 
-describe('NotificatioTableComponent', () => {
-  let component: NotificatioTableComponent;
-  let fixture: ComponentFixture<NotificatioTableComponent>;
+describe('NotificationTableComponent', () => {
+  let component: NotificationTableComponent;
+  let fixture: ComponentFixture<NotificationTableComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ NotificatioTableComponent ]
+      declarations: [ NotificationTableComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(NotificatioTableComponent);
+    fixture = TestBed.createComponent(NotificationTableComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
