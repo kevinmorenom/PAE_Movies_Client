@@ -1,0 +1,32 @@
+//Watched movie style
+.toWatchMovieContainer{
+    width: 200px;
+    border-radius: 15px;
+    height: 200px;
+    margin-top: 10px;
+    margin-left: 10px;
+    box-shadow:  6px 6px 3px #cccccc, 
+             -6px -6px 3px #ffffff;
+    .MovieCard{
+        margin-top: 15px;
+        .Img{
+            height: 130px;
+            border-radius: 15px;
+            margin-left: 55px;
+        }
+        .Title{
+            margin-top: 5px;
+            font-family: 'Heebo';
+            margin-left: 25px;
+        }
+        .btn{
+            width: 140px;
+            background-color: rgb(248, 86, 86);
+            margin-left: 30px;
+            border-radius: 20px;
+            color: white;
+            
+        }
+    }
+    
+}
