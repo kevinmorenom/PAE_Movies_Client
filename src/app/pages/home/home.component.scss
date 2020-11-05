@@ -1,16 +1,78 @@
 //Style home page
 
-.homePage{
-    font-family: 'Heebo';
-    #buscarInput{
-        margin-top: 80px;
-        border-radius: 10px;
-        margin-left: 20px;
-        width: 300px;
-        height: 40px;
-        border: none;
-        box-shadow: 8px 8px 16px #c2c2c2,
-          -8px -8px 16px #ffffff;
-        margin-bottom: 40px;
+.homePage {
+  font-family: 'Heebo';
+
+  #buscarInput {
+    margin-top: 80px;
+    border-radius: 10px;
+    margin-left: 20px;
+    width: 300px;
+    height: 40px;
+    border: none;
+    box-shadow: 8px 8px 16px #c2c2c2,
+      -8px -8px 16px #ffffff;
+    margin-bottom: 40px;
+  }
+
+  //Style of card movies
+
+  .card-group {
+    width: 300px;
+    border-radius: 15px;
+    margin-left: 20px;
+
+    .card {
+      border-radius: 15px;
+      box-shadow: 8px 8px 16px #c2c2c2,
+        -8px -8px 16px #ffffff;
+
+      .imgContainer {
+        text-align: center;
+        background-color: transparent;
+
+        .card-img-top {
+          margin-top: 10px;
+          border-radius: 15px;
+          width: 200px;
+        }
+      }
+
+      .card-title {
+        text-align: center;
+      }
+
+
+
+      .card-footer {
+        .btn1 {
+          border: none;
+          border-radius: 15px;
+          background-color: rgb(140, 159, 211);
+          box-shadow: 8px 8px 16px #c2c2c2,
+            -8px -8px 16px #ffffff;
+        }
+
+        .btn2 {
+          margin-left: 100px;
+          border-radius: 15px;
+          border: none;
+          background-color: rgb(140, 159, 211);
+          box-shadow: 8px 8px 16px #c2c2c2,
+            -8px -8px 16px #ffffff;
+        }
+      }
     }
+  }
+
+  .grid {
+    >div {
+      height: 250px;
+      border: solid 1px #ddd;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
 }
