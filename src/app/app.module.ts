@@ -15,9 +15,11 @@ import { MovieCardComponent } from './global/components/movie-card/movie-card.co
 import { MyProfileComponent } from './pages/my-profile/my-profile.component';
 import { ProfileInfoComponent } from './global/components/profile-info/profile-info.component';
 import { TowatchComponent } from './global/components/towatch/towatch.component';
-import { ViewedComponent } from './global/components/viewed/viewed.component';
 import { WatchedMovieComponent } from './global/components/watched-movie/watched-movie.component';
 import { ToWatchMovieComponent } from './global/components/to-watch-movie/to-watch-movie.component';
+import { WatchedComponent } from './global/components/watched/watched.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NotificatioTableComponent } from './global/components/notificatio-table/notificatio-table.component';
 
 @NgModule({
   declarations: [
@@ -33,14 +35,16 @@ import { ToWatchMovieComponent } from './global/components/to-watch-movie/to-wat
     MyProfileComponent,
     ProfileInfoComponent,
     TowatchComponent,
-    ViewedComponent,
     WatchedMovieComponent,
-    ToWatchMovieComponent
+    ToWatchMovieComponent,
+    WatchedComponent,
+    NotificatioTableComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
