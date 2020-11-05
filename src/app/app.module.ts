@@ -12,6 +12,7 @@ import { RegisterModalComponent } from './global/components/register-modal/regis
 import { HomeComponent } from './pages/home/home.component';
 import { Page404Component } from './pages/page404/page404.component';
 import { MovieCardComponent } from './global/components/movie-card/movie-card.component';
+import { MyProfileComponent } from './pages/my-profile/my-profile.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { MovieCardComponent } from './global/components/movie-card/movie-card.co
     RegisterModalComponent,
     HomeComponent,
     Page404Component,
-    MovieCardComponent
+    MovieCardComponent,
+    MyProfileComponent
   ],
   imports: [
     BrowserModule,
