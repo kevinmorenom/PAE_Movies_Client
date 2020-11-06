@@ -4,6 +4,7 @@
             width: 100%;
             margin-right: 10px;
             float: left;
+            font-family: 'Heebo';
             .profile {
                 background-color: #fff;
                 width: 90%;
@@ -19,6 +20,7 @@
                     border-radius: 15px;
                     margin: 20px;
                     margin-right: 0px;
+                    height: 680px;
                 }
                 float: left;
                 border-radius: 10px;
@@ -27,6 +29,7 @@
             .details {
                 width: 50%;
                 float: left;
+                margin-left: 80px;
                 .title {
                     margin-top: 25px;
                     text-align: center;
@@ -36,6 +39,7 @@
                 .data {
                     background-color: lightgrey;
                     width: 100%;
+                    margin-top: 30px;
                     float: left;
                     div {
                         width: 50%;
@@ -48,16 +52,25 @@
                     }
                 }
                 .overview {
-                    margin-top: 20px;
+                    margin-top: 120px;
                     text-align: center;
                     h4 {
                         font-weight: bold;
                         font-size: 20px;
                     }
                 }
+                .similarText{
+                    margin-top: 100px;
+                    margin-left: 10px;
+                    font-weight: bold;
+                    font-size: 20px;
+                    margin-bottom: 20px;
+                }
                 .similarContainer {
-                    margin-top: auto;
+                    margin-top: 10px;
                     display: flex;
+                    width: 750px;
+                    font-weight: bold;
                     .text {
                         font-family: 'Heebo';
                         font-size: 20px;
@@ -65,8 +78,8 @@
                     }
                     .similarMovies {
                         width: 84%;
-                        margin-left: 40px;
-                        // text-align: center;
+                        margin-left: 10px;
+                        text-align: center;
                         // margin-right: auto;
                         border-radius: 50px;
                         border-radius: 20px;
