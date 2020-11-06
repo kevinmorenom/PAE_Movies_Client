@@ -5,12 +5,11 @@
     <div>
         <!-- <app-movie-card></app-movie-card> -->
         <div class="grid" id="#news-container">
-            <div class="sm-50 md-25" *ngFor="let item of movies">
+            <div class="sm-50 md-20" *ngFor="let item of movies">
                 <div class="card-group">
                     <div class="card">
                         <div class="imgContainer">
-                            <img src="http://image.tmdb.org/t/p/original/{{item.poster_path}}" class="card-img-top"
-                                alt="...">
+                            <img src="http://image.tmdb.org/t/p/original/{{item.poster_path}}" class="card-img-top" alt="...">
                         </div>
                         <hr>
                         <p class="card-title">{{item.original_title}}</p>
