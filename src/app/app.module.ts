@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -22,6 +22,8 @@ import { WatchedComponent } from './global/components/watched/watched.component'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NotificationTableComponent } from './global/components/notification-table/notification-table.component';
 import { MovieProfileComponent } from './pages/movie-profile/movie-profile.component';
+
+import { AngularMaterialModule } from './angular-material.module';
 
 @NgModule({
   declarations: [
@@ -48,9 +50,11 @@ import { MovieProfileComponent } from './pages/movie-profile/movie-profile.compo
     AppRoutingModule,
     NgbModule,
     BrowserAnimationsModule,
-    HttpClientModule
+    HttpClientModule,
+    AngularMaterialModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas:[CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { }
