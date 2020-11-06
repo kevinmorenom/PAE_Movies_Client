@@ -21,6 +21,7 @@ import { ToWatchMovieComponent } from './global/components/to-watch-movie/to-wat
 import { WatchedComponent } from './global/components/watched/watched.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NotificationTableComponent } from './global/components/notification-table/notification-table.component';
+import { MovieProfileComponent } from './pages/movie-profile/movie-profile.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { NotificationTableComponent } from './global/components/notification-tab
     WatchedMovieComponent,
     ToWatchMovieComponent,
     WatchedComponent,
-    NotificationTableComponent
+    NotificationTableComponent,
+    MovieProfileComponent
   ],
   imports: [
     BrowserModule,

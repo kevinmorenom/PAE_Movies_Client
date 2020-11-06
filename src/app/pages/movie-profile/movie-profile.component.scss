@@ -1,0 +1,79 @@
+        //My profile style
+        .movieProfileContainer {
+            margin-top: 70px;
+            width: 100%;
+            margin-right: 10px;
+            float: left;
+            .profile {
+                background-color: #fff;
+                width: 90%;
+                margin-left: auto;
+                margin-right: auto;
+                border-radius: 15px;
+                height: 700px;
+                display: table;
+            }
+            .poster {
+                text-align: center;
+                img {
+                    border-radius: 15px;
+                    margin: 20px;
+                    margin-right: 0px;
+                }
+                float: left;
+                border-radius: 10px;
+                margin-right: 20px;
+            }
+            .details {
+                width: 50%;
+                float: left;
+                .title {
+                    margin-top: 25px;
+                    text-align: center;
+                    font-family: 'Heebo';
+                    font-size: 50px;
+                }
+                .data {
+                    background-color: lightgrey;
+                    width: 100%;
+                    float: left;
+                    div {
+                        width: 50%;
+                        float: left;
+                        text-align: center;
+                    }
+                    h4 {
+                        font-weight: bold;
+                        font-size: 20px;
+                    }
+                }
+                .overview {
+                    margin-top: 20px;
+                    text-align: center;
+                    h4 {
+                        font-weight: bold;
+                        font-size: 20px;
+                    }
+                }
+                .similarContainer {
+                    margin-top: auto;
+                    display: flex;
+                    .text {
+                        font-family: 'Heebo';
+                        font-size: 20px;
+                        margin-left: 30px;
+                    }
+                    .similarMovies {
+                        width: 84%;
+                        margin-left: 40px;
+                        // text-align: center;
+                        // margin-right: auto;
+                        border-radius: 50px;
+                        border-radius: 20px;
+                        box-shadow: 8px 8px 16px #c2c2c2, -8px -8px 16px #ffffff;
+                        height: 225px;
+                        ;
+                    }
+                }
+            }
+        }

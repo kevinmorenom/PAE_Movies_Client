@@ -1,20 +1,17 @@
 //Style profile info
-
-.ProfileInfo{
+.ProfileInfo {
     text-align: center;
     border-bottom: 1px solid rgb(179, 177, 177);
-    .PP{
+    .PP {
         margin-top: 20px;
         height: 100px;
         border-radius: 25px;
-        box-shadow: 8px 8px 16px #c2c2c2,
-      -8px -8px 16px #ffffff;
+        box-shadow: 8px 8px 16px #c2c2c2, -8px -8px 16px #ffffff;
     }
-    .userName{
+    .userName {
         margin-top: 30px;
         font-family: 'Heebo';
         font-size: 20px;
         margin-bottom: 20px;
     }
 }
-

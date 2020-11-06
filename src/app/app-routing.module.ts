@@ -4,12 +4,14 @@ import { RegisterComponent } from './pages/register/register.component';
 import { HomeComponent } from './pages/home/home.component';
 import { Page404Component } from './pages/page404/page404.component';
 import { MyProfileComponent } from './pages/my-profile/my-profile.component';
+import { MovieProfileComponent } from './pages/movie-profile/movie-profile.component';
 
 const routes: Routes = [
   { path:'', redirectTo:'register', pathMatch:'full'},
   { path:'register', component: RegisterComponent},
   { path:'home', component: HomeComponent},
   { path:'profile', component: MyProfileComponent},
+  { path:'movie', component: MovieProfileComponent},
   { path:'**', component:Page404Component}
 ];
 
