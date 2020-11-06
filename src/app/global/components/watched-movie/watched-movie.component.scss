@@ -1,22 +1,23 @@
 //Watched movie style
-.watchedMovieContainer{
+.watchedMovieContainer {
+    flex-basis: 33.333%;
+    flex-grow: 0;
+    flex-shrink: 0; //kevin
     width: 200px;
     border-radius: 15px;
     height: 200px;
     margin-top: 10px;
     margin-left: 10px;
-    box-shadow:  6px 6px 3px #cccccc, 
-             -6px -6px 3px #ffffff;
-    .MovieCard{
+    box-shadow: 6px 6px 3px #cccccc, -6px -6px 3px #ffffff;
+    .MovieCard {
         margin-top: 15px;
-        .Img{
+        .Img {
             height: 130px;
             border-radius: 15px;
         }
-        .Title{
+        .Title {
             margin-top: 25px;
             font-family: 'Heebo';
         }
     }
-    
 }
