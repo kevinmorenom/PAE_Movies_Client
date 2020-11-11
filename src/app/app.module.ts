@@ -22,6 +22,7 @@ import { WatchedComponent } from './global/components/watched/watched.component'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NotificationTableComponent } from './global/components/notification-table/notification-table.component';
 import { MovieProfileComponent } from './pages/movie-profile/movie-profile.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AngularMaterialModule } from './angular-material.module';
 
@@ -51,7 +52,9 @@ import { AngularMaterialModule } from './angular-material.module';
     NgbModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    AngularMaterialModule
+    AngularMaterialModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent],

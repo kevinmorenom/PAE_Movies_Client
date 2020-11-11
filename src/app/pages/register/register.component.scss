@@ -12,7 +12,11 @@
     letter-spacing: 2px;
   }
   #loginBtns{
-    margin-left: 530px;
+    margin-left: 500px;
+    display: inline;
+    #formLogin{
+      display: inline;
+    }
     #inputLogin{
       width: 310px;
     }

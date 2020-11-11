@@ -1,41 +1,47 @@
 <!-- Register modal -->
 
 <div class="container">
-        <div class="row" id="registerContent">
-            <div class="col-sm" id="Texts">
-                <div class="BigText">The greatest movie library out there</div>
-                <div class="SmallText">All the movies you can get</div>
-            </div>
-            <div class="col-sm" id="registerContainer">
-                <div class="registerText">REGISTER</div>
-                <hr>
-                <form>
-                    <div class="form-group">
-                        <label >First Name</label>
-                        <input type="text" class="form-control" placeholder="Enter your first name" id="exampleInputEmail1" >
-                    </div>
-                    <div class="form-group">
-                        <label >Last Name</label>
-                        <input type="text" class="form-control" placeholder="Enter your last name" id="exampleInputPassword1">
-                    </div>
-                    <div class="form-group">
-                        <label >Email</label>
-                        <input type="email" class="form-control" placeholder="Enter your first email" id="exampleInputPassword1">
-                    </div>
-                    <div class="form-group">
-                        <label >Username</label>
-                        <input type="text" class="form-control"  placeholder="Enter your user name" id="exampleInputPassword1">
-                    </div>
-                    <div class="form-group">
-                        <label >Password</label>
-                        <input type="password" class="form-control" placeholder="Enter your password" id="exampleInputPassword1">
-                    </div>
-                    <div class="form-group">
-                        <label >Confirm Password</label>
-                        <input type="password" class="form-control"  placeholder="Enter your password again" id="exampleInputPassword1">
-                    </div>
-                    <button type="submit" class="btn btn-primary" id="submitBtn">Register</button>
-                </form>
-            </div>
+    <div class="row" id="registerContent">
+        <div class="col-sm" id="Texts">
+            <div class="BigText">The greatest movie library out there</div>
+            <div class="SmallText">All the movies you can get</div>
+        </div>
+        <div class="col-sm" id="registerContainer">
+            <div class="registerText">REGISTER</div>
+            <hr>
+            <form [formGroup]="form" (submit)="createUser()">
+                <div class="form-group">
+                    <label>First Name</label>
+                    <input type="text" class="form-control" placeholder="Enter your first name" id="exampleInputEmail1"
+                        formControlName="firstName">
+                </div>
+                <div class="form-group">
+                    <label>Last Name</label>
+                    <input type="text" class="form-control" placeholder="Enter your last name"
+                        id="exampleInputPassword1" formControlName="lastName">
+                </div>
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" class="form-control" placeholder="Enter your first email"
+                        id="exampleInputPassword1" formControlName="email">
+                </div>
+                <div class="form-group">
+                    <label>Username</label>
+                    <input type="text" class="form-control" placeholder="Enter your user name"
+                        id="exampleInputPassword1" formControlName="userName">
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" class="form-control" placeholder="Enter your password"
+                        id="exampleInputPassword1" formControlName="password">
+                </div>
+                <div class="form-group">
+                    <label>Confirm Password</label>
+                    <input type="password" class="form-control" placeholder="Enter your password again"
+                        id="exampleInputPassword1" formControlName="confirmPassword">
+                </div>
+                <button type="submit"  [disabled] = "form.invalid"class="btn btn-primary" id="submitBtn">Register</button>
+            </form>
         </div>
     </div>
+</div>
