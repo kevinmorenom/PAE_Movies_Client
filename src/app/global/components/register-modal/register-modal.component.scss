@@ -1,42 +1,53 @@
 //Content
 .container {
-    font-family: 'Heebo';
-    margin-top: 100px;
-  
-    #registerContent {
-      margin-top: 60px;
-  
-      #Texts {
-        margin-top: 150px;
+  font-family: 'Heebo';
+  margin-top: 100px;
+
+  #registerContent {
+    margin-top: 60px;
+
+    #Texts {
+      margin-top: 150px;
+    }
+
+    .BigText {
+      font-size: 30px;
+    }
+
+    .SmallText {
+      font-size: 18px;
+    }
+
+
+    #registerContainer {
+      box-shadow: 8px 8px 16px #c2c2c2,
+        -8px -8px 16px #ffffff;
+      width: 100%;
+      background-color: #fff;
+      border-radius: 25px;
+
+      .registerText {
+        font-size: 25px;
       }
-  
-      .BigText {
-        font-size: 30px;
+
+      .form-group input {
+        border-radius: 10px;
+        box-shadow: inset 5px 5px 6px rgba(88, 108, 138, 0.24),
+          inset -6px -6px 12px #ffffff;
+        border: none;
+
       }
-  
-      .SmallText {
-        font-size: 18px;
-      }
-  
-  
-      #registerContainer {
-        box-shadow: 8px 8px 16px #c2c2c2,
-          -8px -8px 16px #ffffff;
+
+      #submitBtn {
         width: 100%;
-        background-color: #fff;
-        border-radius: 25px;
-  
-        .registerText{
-            font-size: 25px;
-        }
-        #submitBtn {
-          width: 100%;
-          margin-bottom: 15px;
-        }
-  
-        >div {
-          text-align: center;
-        }
+        margin-bottom: 15px;
+        box-shadow: 8px 8px 16px #c2c2c2,
+        -8px -8px 16px #ffffff;
+      }
+
+      >div {
+        text-align: center;
       }
     }
   }
+}
