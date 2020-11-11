@@ -2,7 +2,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="NavBar">
         <a class="navbar-brand" href="#" id="Titulo">Movie Tracker</a>
         <div class="collapse navbar-collapse" id="loginBtns">
-            <form [formGroup] = "form" class="form-inline my-2 my-lg-0" id="formLogin" (submit) = "loginUser()" >
+            <form [formGroup] = "form" class="form-inline my-2 my-lg-0" id="formLogin" (submit) = "login()" >
                 <input class="form-control mr-sm-2" type="text" placeholder="Email" aria-label="Search" id="inputLogin" formControlName="email">
                 <input class="form-control mr-sm-2" type="password" placeholder="Password" aria-label="Search" id="inputLogin" formControlName="password">
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Login</button>

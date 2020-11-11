@@ -40,6 +40,7 @@
                     <input type="password" class="form-control" placeholder="Enter your password again"
                         id="exampleInputPassword1" formControlName="confirmPassword">
                 </div>
+                <p *ngIf="form.errors && form.errors.mismatch">Contraseñas no coinciden</p>
                 <button type="submit"  [disabled] = "form.invalid"class="btn btn-primary" id="submitBtn">Register</button>
             </form>
         </div>

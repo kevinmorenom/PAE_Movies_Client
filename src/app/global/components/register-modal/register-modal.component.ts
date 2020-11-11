@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { SessionsService } from '../../services/sessions/sessions.service';
 
 @Component({
   selector: 'app-register-modal',
@@ -10,7 +11,7 @@ export class RegisterModalComponent implements OnInit {
 
   form: FormGroup;
 
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(private formBuilder: FormBuilder, private session:SessionsService) { }
 
   ngOnInit(): void {
     this.form = this.formBuilder.group({
@@ -28,6 +29,9 @@ export class RegisterModalComponent implements OnInit {
   createUser() {
     if (this.form.valid) {
       console.log("Crear usuario...")
+      this.session.signUp(this.form.getRawValue()).then().catch(err =>{
+        console.log("Error to sign up", err)
+      })
     } else {
       console.log("Te faltan datos...");
     }
