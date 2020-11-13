@@ -18,7 +18,7 @@ export class AuthService {
   }
 
   //Does not obtain the toke, just validates if you are logged in or not 
-  isLogged(token){
+  isLogged(){
     return !!localStorage.getItem('token'); //If it exist returns true if not false
   }
 }
