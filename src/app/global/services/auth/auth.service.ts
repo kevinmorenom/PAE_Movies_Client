@@ -14,7 +14,7 @@ export class AuthService {
 
   //Obtain the token
   get(){
-    localStorage.get('token'); //Not sure if its get or getItem
+    localStorage.getItem('token'); //Not sure if its get or getItem
   }
 
   //Does not obtain the toke, just validates if you are logged in or not 

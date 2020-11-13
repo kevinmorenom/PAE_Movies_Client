@@ -17,9 +17,9 @@ export class RegisterModalComponent implements OnInit {
     this.form = this.formBuilder.group({
       firstName: ['', Validators.required],
       lastName: ['', Validators.required],
-      email: ['', [Validators.required, Validators.email]],
-      userName: ['', Validators.required],
-      password: ['', [Validators.required, Validators.minLength(6)]],
+      correo: ['', [Validators.required, Validators.email]],
+      usuario: ['', Validators.required],
+      contraseña: ['', [Validators.required, Validators.minLength(6)]],
       confirmPassword: ['', [Validators.required, Validators.minLength(6)]]
     }, {
         validators: this.compararPasswords.bind(this)
@@ -43,7 +43,7 @@ export class RegisterModalComponent implements OnInit {
     if(!this.form) { return; } 
     //Compare both passwords
     const values = this.form.getRawValue();
-    if (values.password === values.confirmPassword) {
+    if (values.contraseña === values.confirmPassword) {
       return null;
     }
     else {
