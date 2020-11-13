@@ -23,6 +23,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NotificationTableComponent } from './global/components/notification-table/notification-table.component';
 import { MovieProfileComponent } from './pages/movie-profile/movie-profile.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SocialLoginModule, SocialAuthServiceConfig, GoogleLoginProvider } from 'angularx-social-login';
+import { environment } from '../environments/environment';
+
 
 import { AngularMaterialModule } from './angular-material.module';
 
@@ -54,9 +57,24 @@ import { AngularMaterialModule } from './angular-material.module';
     HttpClientModule,
     AngularMaterialModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    SocialLoginModule
   ],
-  providers: [],
+  providers: [
+    {provide: 'SocialAuthServiceConfig',
+    useValue: {
+      autoLogin: false,
+      providers: [
+        {
+          id: GoogleLoginProvider.PROVIDER_ID,
+          provider: new GoogleLoginProvider(
+            environment.clientId
+          )
+        }
+      ]
+    } as SocialAuthServiceConfig,
+    }
+  ],
   bootstrap: [AppComponent],
   schemas:[CUSTOM_ELEMENTS_SCHEMA]
 })

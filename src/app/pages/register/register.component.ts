@@ -3,6 +3,7 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { SessionsService } from '../../global/services/sessions/sessions.service';
 import { AuthService } from '../../global/services/auth/auth.service';
 import { Router } from '@angular/router';
+import { SocialAuthService , GoogleLoginProvider} from 'angularx-social-login';
 
 
 @Component({
@@ -16,13 +17,23 @@ export class RegisterComponent implements OnInit {
 
   loginError:boolean;
 
-  constructor(private formBuilder:FormBuilder, private sessions:SessionsService, private auth:AuthService,  private router:Router) { }
+  constructor(
+    private formBuilder:FormBuilder, 
+    private sessions:SessionsService,
+    private auth:AuthService, 
+    private router:Router,
+    private socialAuthService:SocialAuthService) { }
 
   ngOnInit(): void {
     this.form = this.formBuilder.group({
       correo:['',[Validators.required, Validators.email]],
       contraseña:['', Validators.required]
     })
+    this.socialAuthService.authState.subscribe((user) => {
+      console.log('Datos del usuario de Google',user);
+      // this.user = user;
+      // this.loggedIn = (user != null);
+    });
   }
 
   login(){
@@ -41,6 +52,10 @@ export class RegisterComponent implements OnInit {
     }else{
       console.log("Faltan datos... :(");
     }
+  }
+
+  googleLogin(){
+    this.socialAuthService.signIn(GoogleLoginProvider.PROVIDER_ID);
   }
 
 }
