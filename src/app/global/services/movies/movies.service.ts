@@ -14,5 +14,11 @@ export class MoviesService {
     return this.http.get(url).toPromise();
   }
 
+  searchMovie(search=''):Promise<any>{
+    console.log(search);
+    const url = (`${environment.apiUrl}/movie/search?query=`+search);
+    return this.http.get(url).toPromise();
+  }
+
 }
 

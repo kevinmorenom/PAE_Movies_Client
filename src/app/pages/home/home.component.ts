@@ -10,13 +10,13 @@ export class HomeComponent implements OnInit {
 
   movies=[];
   category:string='';
+  search:string='';
 
   constructor(private moviesService:MoviesService) { }
 
   ngOnInit(): void {
     this.getMovies();
   }
-
 
   getMovies(category?){
     this.moviesService.getMovies(category).then(data =>{
@@ -29,5 +29,13 @@ export class HomeComponent implements OnInit {
 
   getCategory(){
     this.getMovies(this.category);
+  }
+
+  searchMovie(){
+    this.moviesService.searchMovie(this.search).then(data=>{
+      this.movies = data;
+    }).catch(err => {
+      console.log(err);
+    })
   }
 }
