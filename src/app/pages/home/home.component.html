@@ -1,13 +1,15 @@
 <!-- Home page -->
 <app-navbar></app-navbar>
 <div class="homePage">
-    <input type="text" placeholder="  Buscar película" id="buscarInput">
+    <input type="text" [(ngModel)]="search" placeholder=" Buscar película" id="buscarInput" (change)='searchMovie()'>
+
     <select name="" id="" [(ngModel)]="category" placeholder='Category' (change)="getCategory()">
-            <option value="">Selecciona una opción</option>
-            <option value="popular">popular</option>
-            <option value="top_rated">top_rated</option>
-            <option value="upcoming">upcoming</option>
-        </select>
+        <option value="">Selecciona una opción</option>
+        <option value="popular">popular</option>
+        <option value="top_rated">top_rated</option>
+        <option value="upcoming">upcoming</option>
+    </select>
+
     <div>
         <!-- <app-movie-card></app-movie-card> -->
         <div class="grid" id="#news-container">
@@ -15,13 +17,18 @@
                 <div class="card-group">
                     <div class="card">
                         <div class="imgContainer">
-                            <img src="http://image.tmdb.org/t/p/original/{{item.poster_path}}" class="card-img-top" alt="...">
+                            <img src="http://image.tmdb.org/t/p/original/{{item.poster_path}}" class="card-img-top"
+                                alt="...">
                         </div>
                         <hr>
                         <a class="card-title">{{item.original_title}}</a>
                         <div class="card-footer">
-                            <button class="btn1"><mat-icon>visibility</mat-icon></button>
-                            <button class="btn2"><mat-icon>add_to_queue</mat-icon></button>
+                            <button class="btn1">
+                                <mat-icon>visibility</mat-icon>
+                            </button>
+                            <button class="btn2">
+                                <mat-icon>add_to_queue</mat-icon>
+                            </button>
                         </div>
                     </div>
                 </div>
