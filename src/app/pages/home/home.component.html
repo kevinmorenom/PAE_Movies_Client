@@ -2,6 +2,12 @@
 <app-navbar></app-navbar>
 <div class="homePage">
     <input type="text" placeholder="  Buscar película" id="buscarInput">
+    <select name="" id="" [(ngModel)]="category" placeholder='Category' (change)="getCategory()">
+            <option value="">Selecciona una opción</option>
+            <option value="popular">popular</option>
+            <option value="top_rated">top_rated</option>
+            <option value="upcoming">upcoming</option>
+        </select>
     <div>
         <!-- <app-movie-card></app-movie-card> -->
         <div class="grid" id="#news-container">
