@@ -9,20 +9,25 @@ import { MoviesService } from '../../global/services/movies/movies.service';
 export class HomeComponent implements OnInit {
 
   movies=[];
+  category:string='';
 
   constructor(private moviesService:MoviesService) { }
 
   ngOnInit(): void {
-    this.getPopular();
+    this.getMovies();
   }
 
 
-  getPopular(){
-    this.moviesService.getPopulars().then(data =>{
+  getMovies(category?){
+    this.moviesService.getMovies(category).then(data =>{
       this.movies = data;
       console.log(data);
     }).catch(err =>{
       console.log(err);
     })
+  }
+
+  getCategory(){
+    this.getMovies(this.category);
   }
 }
