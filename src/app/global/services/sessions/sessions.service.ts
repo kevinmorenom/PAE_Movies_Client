@@ -18,4 +18,9 @@ export class SessionsService {
     const url = `${environment.apiUrl}/user/login`; 
     return this.http.post(url, credentials).toPromise();
   }
+
+  googleLogin(user){
+    const url = `${environment.apiUrl}/user/login/google`
+    return this.http.post(url,user).toPromise();
+  }
 }

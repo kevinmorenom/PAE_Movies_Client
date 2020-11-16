@@ -31,8 +31,12 @@ export class RegisterComponent implements OnInit {
     })
     this.socialAuthService.authState.subscribe((user) => {
       console.log('Datos del usuario de Google',user);
-      // this.user = user;
-      // this.loggedIn = (user != null);
+      this.sessions.googleLogin(user).then(response =>{
+        console.log('Response: ',response);
+        this.auth.save(response);
+        this.loginError=false;
+        this.router.navigate(['/home']);
+      });
     });
   }
 
