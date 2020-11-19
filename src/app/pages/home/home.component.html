@@ -3,12 +3,13 @@
 <div class="homePage">
     <input type="text" [(ngModel)]="search" placeholder=" Buscar película" id="buscarInput" (change)='searchMovie()'>
 
-    <select name="" id="" [(ngModel)]="category" placeholder='Category' (change)="getCategory()">
-        <option value="">Selecciona una opción</option>
-        <option value="popular">popular</option>
-        <option value="top_rated">top_rated</option>
-        <option value="upcoming">upcoming</option>
-    </select>
+        <select name="" class="categorySelect" id="" [(ngModel)]="category" placeholder='Category'
+            (change)="getCategory()">
+            <option value="" class="optionCategory">Categorías</option>
+            <option value="popular">popular</option>
+            <option value="top_rated">top_rated</option>
+            <option value="upcoming">upcoming</option>
+        </select>
 
     <div>
         <!-- <app-movie-card></app-movie-card> -->

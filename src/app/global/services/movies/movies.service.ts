@@ -22,7 +22,10 @@ export class MoviesService {
   searchMovie(search=''):Promise<any>{
     console.log(search);
     const url = (`${environment.apiUrl}/movie/search?query=`+search);
-    return this.http.get(url).toPromise();
+    const httpHeaders = new HttpHeaders({
+      authorization:this.auth.get()
+    })
+    return this.http.get(url, { headers:httpHeaders} ).toPromise();
   }
 
 }
