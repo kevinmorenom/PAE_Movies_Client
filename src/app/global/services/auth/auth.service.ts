@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -14,7 +15,7 @@ export class AuthService {
 
   //Obtain the token
   get(){
-    localStorage.getItem('token'); //Not sure if its get or getItem
+   return localStorage.getItem('token'); //Not sure if its get or getItem  
   }
 
   //Does not obtain the toke, just validates if you are logged in or not 

@@ -1,17 +1,22 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { environment } from '../../../../environments/environment';
+import { AuthService } from '../auth/auth.service';
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class MoviesService {
 
-  constructor(private http:HttpClient) { }
+  constructor(private http:HttpClient, private auth:AuthService) { }
 
   getMovies(category=''):Promise<any>{
     const url = (`${environment.apiUrl}/movie/get/`+category);
-    return this.http.get(url).toPromise();
+    const httpHeaders=new HttpHeaders({
+      authorization:this.auth.get()
+    })
+    return this.http.get(url, { headers:httpHeaders}).toPromise();
   }
 
   searchMovie(search=''):Promise<any>{
