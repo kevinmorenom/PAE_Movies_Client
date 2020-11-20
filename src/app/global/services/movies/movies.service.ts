@@ -2,12 +2,14 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { environment } from '../../../../environments/environment';
 import { AuthService } from '../auth/auth.service';
-
+import { BehaviorSubject, Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class MoviesService {
+
+  clickedMovie = new BehaviorSubject('hola');
 
   constructor(private http:HttpClient, private auth:AuthService) { }
 
@@ -26,6 +28,10 @@ export class MoviesService {
       authorization:this.auth.get()
     })
     return this.http.get(url, { headers:httpHeaders} ).toPromise();
+  }
+
+  setClick(item){
+    this.clickedMovie.next(item)
   }
 
 }
