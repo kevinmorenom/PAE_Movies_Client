@@ -3,8 +3,7 @@
 <div class="homePage">
     <input type="text" [(ngModel)]="search" placeholder=" Buscar película" id="buscarInput" (change)='searchMovie()'>
 
-        <select name="" class="categorySelect" id="" [(ngModel)]="category" placeholder='Category'
-            (change)="getCategory()">
+    <select name="" class="categorySelect" id="" [(ngModel)]="category" placeholder='Category' (change)="getCategory()">
             <option value="" class="optionCategory">Categorías</option>
             <option value="popular">popular</option>
             <option value="top_rated">top_rated</option>
@@ -15,11 +14,10 @@
         <!-- <app-movie-card></app-movie-card> -->
         <div class="grid" id="#news-container">
             <div class="sm-50 md-20" *ngFor="let item of movies">
-                <div class="card-group">
+                <div class="card-group" (click)="profileMovie(item)">
                     <div class="card">
                         <div class="imgContainer">
-                            <img src="http://image.tmdb.org/t/p/original/{{item.poster_path}}" class="card-img-top"
-                                alt="...">
+                            <img src="http://image.tmdb.org/t/p/original/{{item.poster_path}}" class="card-img-top" alt="...">
                         </div>
                         <hr>
                         <a class="card-title">{{item.original_title}}</a>

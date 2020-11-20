@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MoviesService } from '../../global/services/movies/movies.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -12,7 +13,7 @@ export class HomeComponent implements OnInit {
   category:string='';
   search:string='';
 
-  constructor(private moviesService:MoviesService) { }
+  constructor(private moviesService:MoviesService, private router:Router) { }
 
   ngOnInit(): void {
     this.getMovies();
@@ -37,5 +38,9 @@ export class HomeComponent implements OnInit {
     }).catch(err => {
       console.log(err);
     })
+  }
+  profileMovie(item){
+    console.log(item);
+    // this.router.navigate(['/movie'])
   }
 }

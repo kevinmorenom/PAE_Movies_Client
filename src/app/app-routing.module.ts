@@ -13,7 +13,7 @@ const routes: Routes = [
   { path:'register', component: RegisterComponent, canActivate:[UnAuthGuard]},
   { path:'home', component: HomeComponent, canActivate:[AuthGuard]},
   { path:'profile', component: MyProfileComponent, canActivate:[AuthGuard]},
-  { path:'movie', component: MovieProfileComponent, canActivate:[AuthGuard]},
+  { path:'movie/:id', component: MovieProfileComponent, canActivate:[AuthGuard]},
   { path:'**', component:Page404Component}
 ];
 
