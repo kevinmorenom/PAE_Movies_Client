@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { MoviesService } from '../../global/services/movies/movies.service';
 import { Router } from '@angular/router';
+import { SocketsService } from 'src/app/global/services/sockets/sockets.service';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-home',
@@ -13,16 +15,31 @@ export class HomeComponent implements OnInit {
   category:string='';
   search:string='';
 
-  constructor(private moviesService:MoviesService, private router:Router) { }
-
+  constructor(private moviesService:MoviesService, private router:Router, private socket:SocketsService, private toastr:ToastrService) { }
   ngOnInit(): void {
     this.getMovies();
+    this.socket.on('watchedMovies', (data)=>{
+      const userName = data.user || 'Alguien';
+      console.log(`dataToastr: ${data.original_title}`);
+      this.toastr.success(`${userName} añadió a su lista:  
+      <a href="/movie/${data}" onClick=this.profileMovie(${data}) target="_blank">${data.original_title}</a>`, 'Watched!',{
+        enableHtml: true
+      });
+
+    })
+  }
+
+  watched(item){
+    console.log("movieHomeCompnt: " + item.original_title);
+    console.log(item);
+    this.socket.emit('watchedMovies', item);
+
   }
 
   getMovies(category?){
     this.moviesService.getMovies(category).then(data =>{
       this.movies = data;
-      console.log(data);
+      // console.log(data);
     }).catch(err =>{
       console.log(err);
     })
@@ -41,7 +58,7 @@ export class HomeComponent implements OnInit {
   }
   profileMovie(item){
     this.moviesService.setClick(item);
-    console.log(item);
+    // console.log(item);
     this.router.navigate(['/movie/' + item ])
   }
 }

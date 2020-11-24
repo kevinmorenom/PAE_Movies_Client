@@ -14,7 +14,7 @@ export class MovieProfileComponent implements OnInit {
 
   constructor(private activatedRoute:ActivatedRoute, private movieService:MoviesService) { 
     this.activatedRoute.params.subscribe(response=>{
-      console.log("response",response);
+      // console.log("response",response);
     })
   }
 

@@ -25,7 +25,7 @@ import { MovieProfileComponent } from './pages/movie-profile/movie-profile.compo
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SocialLoginModule, SocialAuthServiceConfig, GoogleLoginProvider } from 'angularx-social-login';
 import { environment } from '../environments/environment';
-
+import { ToastrModule } from 'ngx-toastr';
 
 import { AngularMaterialModule } from './angular-material.module';
 
@@ -58,7 +58,8 @@ import { AngularMaterialModule } from './angular-material.module';
     AngularMaterialModule,
     FormsModule,
     ReactiveFormsModule,
-    SocialLoginModule
+    SocialLoginModule,
+    ToastrModule.forRoot()
   ],
   providers: [
     {provide: 'SocialAuthServiceConfig',

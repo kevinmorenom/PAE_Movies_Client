@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SocketsService } from 'src/app/global/services/sockets/sockets.service';
 
 @Component({
   selector: 'app-navbar',
@@ -7,13 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor() { }
+  constructor(private socket:SocketsService) { }
 
   ngOnInit(): void {
   }
 
   logOut(){
     localStorage.removeItem('token');
+    this.socket.disconnect();
   }
 
 }
