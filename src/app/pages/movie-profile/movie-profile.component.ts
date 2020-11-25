@@ -32,7 +32,7 @@ export class MovieProfileComponent implements OnInit {
   getSimilar(movieId){
     this.movieService.getSimilar(movieId).then(data =>{
       this.similar = data;
-      // console.log(data);
+      console.log(data);
     }).catch(err =>{
       console.log(err);
     })
