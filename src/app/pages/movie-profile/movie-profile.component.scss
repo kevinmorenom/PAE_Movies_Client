@@ -90,6 +90,27 @@
               width: 750px;
               font-weight: bold;
 
+              .similar {
+                width: 84%;
+                margin-left: 40px;
+                // text-align: center;
+                // margin-right: auto;
+                border-radius: 50px;
+                border-radius: 20px;
+                box-shadow: 8px 8px 16px #c2c2c2, -8px -8px 16px #ffffff;
+                height: 225px;
+                align-items: stretch;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                overflow-x: auto;
+                overflow-y: hidden;
+              }
+
+              .towatch::-webkit-scrollbar {
+                display: none;
+              }
+
               .text {
                 font-family: 'Heebo';
                 font-size: 20px;

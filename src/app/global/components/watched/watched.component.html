@@ -1,6 +1,6 @@
 <div class="watchedContainer">
     <div class="text">Watched : </div>
-    <div class="watched">
+    <div class="watched" *ngFor="let item of movies">
         <app-watched-movie></app-watched-movie>
         <app-watched-movie></app-watched-movie>
         <app-watched-movie></app-watched-movie>

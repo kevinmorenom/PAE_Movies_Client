@@ -34,5 +34,15 @@ export class MoviesService {
     this.clickedMovie.next(item)
   }
 
+  getSimilar(movieId): Promise<any>{
+    console.log(movieId);
+    const url = (`${environment.apiUrl}/movie/similar/?id=`+movieId);
+    const httpHeaders = new HttpHeaders({
+      authorization:this.auth.get()
+    })
+    return this.http.get(url, { headers:httpHeaders} ).toPromise();
+
+  }
+
 }
 

@@ -9,6 +9,8 @@ import { MoviesService } from '../../global/services/movies/movies.service';
 })
 export class MovieProfileComponent implements OnInit {
 
+  similar=[];
+  
   @Input() currentMovie:any;
   MovieId:number;
 
@@ -24,6 +26,16 @@ export class MovieProfileComponent implements OnInit {
       this.currentMovie = res;
       console.log(this.currentMovie);
     });
+    this.getSimilar(this.currentMovie.id);
+
+  }
+  getSimilar(movieId){
+    this.movieService.getSimilar(movieId).then(data =>{
+      this.similar = data;
+      // console.log(data);
+    }).catch(err =>{
+      console.log(err);
+    })
   }
 
 }
