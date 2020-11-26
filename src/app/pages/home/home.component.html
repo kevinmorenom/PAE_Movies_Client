@@ -14,13 +14,13 @@
         <!-- <app-movie-card></app-movie-card> -->
         <div class="grid" id="#news-container">
             <div class="sm-50 md-20" *ngFor="let item of movies">
-                <div class="card-group" >
+                <div class="card-group">
                     <div class="card">
-                        <div class="imgContainer" (click)="profileMovie(item)">
-                            <img src="http://image.tmdb.org/t/p/original/{{item.poster_path}}" class="card-img-top" alt="...">
+                        <div class="imgContainer" (click)="profileMovie(item.id)">
+                            <a routerLink="../movie/{{item.id}}"><img src="http://image.tmdb.org/t/p/original/{{item.poster_path}}" class="card-img-top" alt="..."></a>
                         </div>
                         <hr>
-                        <a class="card-title" (click)="profileMovie(item)">{{item.original_title}}</a>
+                        <a routerLink="../movie/{{item.id}}" class="card-title" (click)="profileMovie(item)">{{item.original_title}}</a>
                         <div class="card-footer">
                             <button class="btn1" (click)="watched(item)">
                                 <mat-icon>visibility</mat-icon>

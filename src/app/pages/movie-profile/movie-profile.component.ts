@@ -10,24 +10,34 @@ import { MoviesService } from '../../global/services/movies/movies.service';
 export class MovieProfileComponent implements OnInit {
 
   similar=[];
+  currentMovie=[];
   
-  @Input() currentMovie:any;
+  // @Input() currentMovie:any;
   MovieId:number;
 
   constructor(private activatedRoute:ActivatedRoute, private movieService:MoviesService) { 
     this.activatedRoute.params.subscribe(response=>{
-      // console.log("response",response);
+      console.log("Clicked Movie ID",response);
+      this.MovieId=response.id;
     })
   }
 
   ngOnInit(): void {
     this.movieService.clickedMovie.subscribe(res =>{
-      console.log(res);
-      this.currentMovie = res;
-      console.log(this.currentMovie);
+      // this.currentMovie = res;
     });
-    this.getSimilar(this.currentMovie.id);
+    this.getMovieData(this.MovieId);
+    this.getSimilar(this.MovieId);
 
+  }
+
+  getMovieData(movieId){
+    this.movieService.getOne(movieId).then(data =>{
+      this.currentMovie = data;
+      console.log(data);
+    }).catch(err =>{
+      console.log(err);
+    })
   }
   getSimilar(movieId){
     this.movieService.getSimilar(movieId).then(data =>{

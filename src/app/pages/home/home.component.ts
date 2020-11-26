@@ -56,9 +56,10 @@ export class HomeComponent implements OnInit {
       console.log(err);
     })
   }
-  profileMovie(item){
-    this.moviesService.setClick(item);
+
+  profileMovie(movieId){
+    this.moviesService.setClick(movieId);
     // console.log(item);
-    this.router.navigate(['/movie/' + item ])
+    // this.router.navigate(['/movie/' + movieId ])
   }
 }

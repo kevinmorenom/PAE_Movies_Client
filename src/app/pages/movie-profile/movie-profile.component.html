@@ -2,13 +2,13 @@
 <div class="movieProfileContainer">
     <div class="profile" *ngIf="currentMovie">
 
-        <div class="poster" >
+        <div class="poster">
             <img src="http://image.tmdb.org/t/p/original/{{currentMovie.poster_path}}" alt="" class="Poster">
         </div>
 
         <div class="details">
             <div></div>
-        <h1 class="title" name='title' >{{currentMovie.original_title}}</h1>
+            <h1 class="title" name='title'>{{currentMovie.original_title}}</h1>
             <div class="data">
                 <div>
                     <h4>Release Date</h4>
@@ -33,7 +33,7 @@
                     </div>
                 </div>
             </div> -->
-            <app-watched [movies] = "similar"></app-watched>
+            <app-watched [movies]="similar"></app-watched>
         </div>
 
     </div>

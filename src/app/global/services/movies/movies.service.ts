@@ -31,17 +31,25 @@ export class MoviesService {
   }
 
   setClick(item){
+    console.log("Set Click"+item);
     this.clickedMovie.next(item)
   }
 
   getSimilar(movieId): Promise<any>{
-    console.log(movieId);
     const url = (`${environment.apiUrl}/movie/similar/?id=`+movieId);
     const httpHeaders = new HttpHeaders({
       authorization:this.auth.get()
     })
     return this.http.get(url, { headers:httpHeaders} ).toPromise();
 
+  }
+
+  getOne(MovieId):Promise<any>{
+    const url = (`${environment.apiUrl}/movie/getOne/`+MovieId);
+    const httpHeaders=new HttpHeaders({
+      authorization:this.auth.get()
+    })
+    return this.http.get(url, { headers:httpHeaders}).toPromise();
   }
 
 }

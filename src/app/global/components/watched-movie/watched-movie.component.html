@@ -1,6 +1,9 @@
 <div class="watchedMovieContainer">
+    <a routerLink="../../movie/{{movie.id}}">
         <div class="MovieCard">
-                <img src="http://image.tmdb.org/t/p/original/{{movie.poster_path}}" alt="" class="Img">
-                <div class="Title">{{movie.original_title}}</div>
+            <img src="http://image.tmdb.org/t/p/original/{{movie.poster_path}}" alt="" class="Img">
+            <div class="Title">{{movie.original_title}}</div>
         </div>
-    </div>
+    </a>
+</div>
+<router-outlet></router-outlet>
