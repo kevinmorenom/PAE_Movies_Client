@@ -22,7 +22,7 @@ export class HomeComponent implements OnInit {
       const userName = data.user || 'Alguien';
       console.log(`dataToastr: ${data.original_title}`);
       this.toastr.success(`${userName} añadió a su lista:  
-      <a href="/movie/${data}" onClick=this.profileMovie(${data}) target="_blank">${data.original_title}</a>`, 'Watched!',{
+      <a href="/movie/${data.id}" target="_blank">${data.original_title}</a>`, 'Watched!',{
         enableHtml: true
       });
 
