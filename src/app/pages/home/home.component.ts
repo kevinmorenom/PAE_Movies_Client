@@ -33,6 +33,16 @@ export class HomeComponent implements OnInit {
     console.log("movieHomeCompnt: " + item.original_title);
     console.log(item);
     this.socket.emit('watchedMovies', item);
+    let movieData={
+      "id_movie":item.id,
+      "original_title":item.original_title,
+      "poster_path":item.poster_path
+    }
+    this.moviesService.watchMovie(movieData).then(data =>{
+      console.log('Se marco como vista');
+    }).catch(err =>{
+      console.log(err);
+    })
 
   }
 

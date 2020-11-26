@@ -52,5 +52,14 @@ export class MoviesService {
     return this.http.get(url, { headers:httpHeaders}).toPromise();
   }
 
+  watchMovie(movie){
+    console.log(movie);
+    const url = (`${environment.apiUrl}/watched/post/`);
+    const httpHeaders=new HttpHeaders({
+      authorization:this.auth.get()
+    })
+    return this.http.post(url,movie, { headers:httpHeaders}).toPromise();
+  }
+
 }
 

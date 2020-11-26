@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { UserService } from '../../services/user/user.service';
 
 @Component({
   selector: 'app-profile-info',
@@ -10,12 +11,16 @@ export class ProfileInfoComponent implements OnInit {
   form: FormGroup;
   file: File;
 
-  constructor(private formBuilder: FormBuilder) { }
+  
+  watched=[];
+  constructor(private formBuilder: FormBuilder,private userService:UserService) { }
 
   ngOnInit(): void {
     this.form = this.formBuilder.group({
       image: ['', Validators.required]
     })
+    this.getWatched();
+  
   }
 
   onFileChange(){
@@ -24,6 +29,15 @@ export class ProfileInfoComponent implements OnInit {
     if(!this.form){return;}
     const values = this.form.getRawValue();
     console.log(values);
+  }
+
+  getWatched(){
+    this.userService.getWatched().then(data =>{
+      this.watched = data;
+      console.log(data);
+    }).catch(err =>{
+      console.log(err);
+    })
   }
 
 }
