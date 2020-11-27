@@ -9,7 +9,7 @@ import { MoviesService } from '../../global/services/movies/movies.service';
 })
 export class MovieProfileComponent implements OnInit {
 
-  similar=[];
+  similar:any;
   currentMovie=[];
   
   // @Input() currentMovie:any;

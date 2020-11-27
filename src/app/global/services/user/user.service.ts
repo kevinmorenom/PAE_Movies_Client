@@ -17,4 +17,21 @@ export class UserService {
     })
     return this.http.get(url, { headers:httpHeaders}).toPromise();
   }
+
+  setImage(image):Promise<any>{
+    // console.log(image);
+    const url = (`${environment.apiUrl}/pp`);
+    const httpHeaders=new HttpHeaders({
+      authorization:this.auth.get()
+    })
+    return this.http.post(url, image ,{ headers:httpHeaders}).toPromise();
+  }
+
+  getUserByToken(){
+    const url = (`${environment.apiUrl}/user/getByToken`);
+    const httpHeaders=new HttpHeaders({
+      authorization:this.auth.get()
+    })
+    return this.http.get(url ,{ headers:httpHeaders}).toPromise();
+  }
 }

@@ -23,7 +23,7 @@
                 <h4>Overview</h4>
                 {{currentMovie.overview}}
             </div>
-            <div class="similarText">
+            <div class="similarText" *ngIf="similar">
                 Similar Movies
             </div>
             <!-- <div class="similarContainer">
@@ -33,7 +33,7 @@
                     </div>
                 </div>
             </div> -->
-            <div class="similarMovieList">
+            <div class="similarMovieList" *ngIf="similar">
                 <app-watched [movies]="similar" ></app-watched>
 
             </div>
