@@ -2,9 +2,26 @@
 <app-navbar></app-navbar>
 <div class="profileContainer">
     <div class="profile">
-        <app-profile-info></app-profile-info>
+        <!-- <app-profile-info></app-profile-info>
         <app-towatch></app-towatch>
-        <app-watched></app-watched>
+         -->
+        <div class="container">
+            <div class="row">
+                <div class="col-4">
+                    <app-profile-info></app-profile-info>
+                </div>
+                <div class="col-8" id="movieLists">
+                    <div class="watchedMovies">
+                        <div class="ListM">Watched</div>
+                        <app-watched></app-watched>
+                    </div>
+                    <div>
+                        <div class="ListM">To Watch</div>
+                        <app-towatch></app-towatch>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 <app-footer></app-footer>

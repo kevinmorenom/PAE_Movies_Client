@@ -1,6 +1,5 @@
 <div class="watchedContainer">
     <div *ngIf="movies.length != 0 "></div>
-    <div class="text">Watched : </div>
     <div class="watched" >
         <app-watched-movie *ngFor="let item of movies" [movie] = "item"></app-watched-movie>
     </div>

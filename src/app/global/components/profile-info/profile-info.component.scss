@@ -2,10 +2,12 @@
 .ProfileInfo {
   text-align: center;
   border-bottom: 1px solid rgb(179, 177, 177);
+  margin-top: 100px;
 
   .PP {
     margin-top: 20px;
-    height: 100px;
+    margin-bottom: 10px;
+    height: 300px;
     border-radius: 25px;
     box-shadow: 8px 8px 16px #c2c2c2, -8px -8px 16px #ffffff;
   }

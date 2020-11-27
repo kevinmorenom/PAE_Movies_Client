@@ -19,6 +19,9 @@ export class MovieProfileComponent implements OnInit {
     this.activatedRoute.params.subscribe(response=>{
       console.log("Clicked Movie ID",response);
       this.MovieId=response.id;
+      this.getMovieData(this.MovieId);
+      this.getSimilar(this.MovieId);
+
     })
   }
 
@@ -26,9 +29,7 @@ export class MovieProfileComponent implements OnInit {
     this.movieService.clickedMovie.subscribe(res =>{
       // this.currentMovie = res;
     });
-    this.getMovieData(this.MovieId);
-    this.getSimilar(this.MovieId);
-
+    
   }
 
   getMovieData(movieId){
