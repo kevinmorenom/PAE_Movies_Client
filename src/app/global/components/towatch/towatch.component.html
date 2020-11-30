@@ -1,13 +1,7 @@
 <div class="toWatchContainer">
     <div class="towatch">
 
-        <app-to-watch-movie></app-to-watch-movie>
-        <app-to-watch-movie></app-to-watch-movie>
-        <app-to-watch-movie></app-to-watch-movie>
-        <app-to-watch-movie></app-to-watch-movie>
-        <app-to-watch-movie></app-to-watch-movie>
-        <app-to-watch-movie></app-to-watch-movie>
-        <app-to-watch-movie></app-to-watch-movie>
+        <app-to-watch-movie *ngFor="let item of movies" [movie] = "item"></app-to-watch-movie>
 
     </div>
 </div>

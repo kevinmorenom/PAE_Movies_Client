@@ -45,6 +45,21 @@ export class HomeComponent implements OnInit {
     })
   }
 
+  toWatch(item){
+    console.log("movieHomeCompnt: " + item.original_title);
+    console.log(item);
+    let movieData={
+      "id":item.id,
+      "original_title":item.original_title,
+      "poster_path":item.poster_path
+    }
+    this.moviesService.toWatchMovie(movieData).then(data =>{
+      console.log('Se agregó a la lista 2watch');
+    }).catch(err =>{
+      console.log(err);
+    })
+  }
+
   getMovies(category?){
     this.moviesService.getMovies(category).then(data =>{
       this.movies = data;

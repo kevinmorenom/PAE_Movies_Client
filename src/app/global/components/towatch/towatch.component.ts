@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-towatch',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./towatch.component.scss']
 })
 export class TowatchComponent implements OnInit {
+
+  @Input() movies:any[] = [];
 
   constructor() { }
 

@@ -8,19 +8,32 @@ import { UserService } from '../../global/services/user/user.service';
 })
 export class MyProfileComponent implements OnInit {
 
-  watched=[];
+  watched = [];
+  toWatch = [];
 
-  constructor(private userService:UserService ) { }
+  constructor(private userService: UserService) {
+    this.getToWatch();
+
+  }
 
   ngOnInit(): void {
     this.getWatched();
   }
 
-  getWatched(){
-    this.userService.getWatched().then(data =>{
+  getWatched() {
+    this.userService.getWatched().then(data => {
       this.watched = data;
       console.log(data);
-    }).catch(err =>{
+    }).catch(err => {
+      console.log(err);
+    })
+  }
+
+  getToWatch() {
+    this.userService.getToWatch().then(data => {
+      this.toWatch = data;
+      console.log(data);
+    }).catch(err => {
       console.log(err);
     })
   }

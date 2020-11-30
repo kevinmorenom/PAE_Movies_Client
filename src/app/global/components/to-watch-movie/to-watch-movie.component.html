@@ -1,7 +1,9 @@
 <div class="toWatchMovieContainer">
-        <div class="MovieCard">
-            <img src="../../../../assets/Avengers.png" alt="" class="Img">
-            <div class="Title">Avengers Infinity War</div>
-            <button class="btn">Remove</button>
-        </div>
+    <div class="MovieCard">
+        <a routerLink="/movie/{{movie.id}}">
+            <img src="http://image.tmdb.org/t/p/original/{{movie.poster_path}}" alt="" class="Img">
+            <div class="Title">{{movie.original_title}}</div>
+        </a>
+        <button class="btn" (click)="deleteToWatch()" routerLink="/profile">Remove</button>
     </div>
+</div>

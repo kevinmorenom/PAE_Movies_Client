@@ -61,5 +61,21 @@ export class MoviesService {
     return this.http.post(url,movie, { headers:httpHeaders}).toPromise();
   }
 
-}
+  toWatchMovie(movie){
+    console.log(movie);
+    const url = (`${environment.apiUrl}/toWatch/post/`);
+    const httpHeaders=new HttpHeaders({
+      authorization:this.auth.get()
+    })
+    return this.http.post(url,movie, { headers:httpHeaders}).toPromise();
+  }
+
+  deleteToWatch(movie){
+    console.log(movie);
+    const url = (`${environment.apiUrl}/toWatch/delete/${movie.id}`);
+    const httpHeaders=new HttpHeaders({
+      authorization:this.auth.get()
+    })
+    return this.http.delete(url, {headers:httpHeaders}).toPromise();
+  }}
 

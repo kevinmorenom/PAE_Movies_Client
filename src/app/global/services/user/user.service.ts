@@ -18,6 +18,14 @@ export class UserService {
     return this.http.get(url, { headers:httpHeaders}).toPromise();
   }
 
+  getToWatch():Promise<any>{
+    const url = (`${environment.apiUrl}/toWatch/get/`);
+    const httpHeaders=new HttpHeaders({
+      authorization:this.auth.get()
+    })
+    return this.http.get(url, { headers:httpHeaders}).toPromise();
+  }
+
   setImage(image):Promise<any>{
     // console.log(image);
     const url = (`${environment.apiUrl}/pp`);

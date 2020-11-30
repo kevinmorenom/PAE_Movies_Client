@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { MoviesService } from '../../services/movies/movies.service';
 
 @Component({
   selector: 'app-to-watch-movie',
@@ -7,9 +8,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ToWatchMovieComponent implements OnInit {
 
-  constructor() { }
+  @Input() movie:any;
+
+  constructor(private movieService:MoviesService) { }
 
   ngOnInit(): void {
+  }
+
+  deleteToWatch(){
+    let movieData = {
+      id:this.movie.id
+    }
+    this.movieService.deleteToWatch(movieData).then(data =>{
+      console.log("Se borró la peli");
+    }).catch(err => {
+      console.log(err);
+    })
   }
 
 }
