@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { SocketsService } from 'src/app/global/services/sockets/sockets.service';
-
+import { SocketsService } from '../../../global/services/sockets/sockets.service'
+import { UserService } from '../../services/user/user.service';
+import { AuthService } from '../../services/auth/auth.service';
+import { environment } from '../../../../environments/environment';
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
@@ -8,14 +10,28 @@ import { SocketsService } from 'src/app/global/services/sockets/sockets.service'
 })
 export class NavbarComponent implements OnInit {
 
-  constructor(private socket:SocketsService) { }
+  apiUrl = environment.apiUrl;
+  user: any
+
+  constructor(private socket:SocketsService, private userService:UserService, private auth:AuthService) { }
 
   ngOnInit(): void {
+    this.getUser();
   }
 
   logOut(){
     localStorage.removeItem('token');
     this.socket.disconnect();
   }
+
+  getUser(){
+    this.userService.getUserByToken().then(data => {
+      this.user = data;
+      console.log("This is the data:", data)
+    }).catch(err => {
+      console.log(err);
+    })
+  }
+
 
 }

@@ -2,7 +2,8 @@
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="navBar">
     <a class="navbar-brand" routerLink="/" id="Titulo">Movie tracker</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
 
@@ -10,12 +11,10 @@
         <ul class="navbar-nav mr-auto">
 
             <li class="nav-item active">
-                <a class="nav-link" routerLink="../profile">
-                    <mat-icon>person</mat-icon><span class="sr-only">(current)</span>
-                </a>
+                <img *ngIf="user" src='{{apiUrl}}/assets/pps/{{user._id}}.jpeg' alt="" class="PP">
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">User</a>
+                <a class="nav-link" routerLink="../profile">User</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#" (click)="logOut()">Logout</a>
