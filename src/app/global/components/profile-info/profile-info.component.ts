@@ -22,7 +22,6 @@ export class ProfileInfoComponent implements OnInit {
     this.form = this.formBuilder.group({
       image: []
     })
-    this.getWatched();
     this.getUser();
   
   }
@@ -37,14 +36,7 @@ export class ProfileInfoComponent implements OnInit {
     }
   }
 
-  getWatched(){
-    this.userService.getWatched().then(data =>{
-      this.watched = data;
-      console.log(data);
-    }).catch(err =>{
-      console.log(err);
-    })
-  }
+ 
 
   onSubmit() {
     const formData = new FormData();

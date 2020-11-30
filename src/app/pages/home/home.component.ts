@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MoviesService } from '../../global/services/movies/movies.service';
 import { Router } from '@angular/router';
-import { SocketsService } from 'src/app/global/services/sockets/sockets.service';
+import { SocketsService } from '../../global/services/sockets/sockets.service';
 import { ToastrService } from 'ngx-toastr';
 
 @Component({
@@ -34,7 +34,7 @@ export class HomeComponent implements OnInit {
     console.log(item);
     this.socket.emit('watchedMovies', item);
     let movieData={
-      "id_movie":item.id,
+      "id":item.id,
       "original_title":item.original_title,
       "poster_path":item.poster_path
     }
@@ -43,7 +43,6 @@ export class HomeComponent implements OnInit {
     }).catch(err =>{
       console.log(err);
     })
-
   }
 
   getMovies(category?){

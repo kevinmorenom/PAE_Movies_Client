@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UserService } from '../../global/services/user/user.service';
 
 @Component({
   selector: 'app-my-profile',
@@ -7,9 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MyProfileComponent implements OnInit {
 
-  constructor() { }
+  watched=[];
+
+  constructor(private userService:UserService ) { }
 
   ngOnInit(): void {
+    this.getWatched();
   }
 
+  getWatched(){
+    this.userService.getWatched().then(data =>{
+      this.watched = data;
+      console.log(data);
+    }).catch(err =>{
+      console.log(err);
+    })
+  }
 }
