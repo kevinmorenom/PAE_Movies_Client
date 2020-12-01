@@ -18,8 +18,8 @@ export class TowatchComponent implements OnInit {
   deleteToWatch(event){
     console.log(event);
     console.log(this.movies);
-    console.log(this.movies.indexOf({"id":event.id}));
-
+    const pos = this.movies.map(function(e) { return e.id; }).indexOf(event.id);
+    this.movies.splice(pos ,1)
   }
 
 }

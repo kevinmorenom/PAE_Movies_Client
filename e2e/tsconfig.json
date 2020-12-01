@@ -1,7 +1,7 @@
 /* To learn more about this file see: https://angular.io/config/tsconfig. */
-{
+{​​​​​​​
   "extends": "../tsconfig.base.json",
-  "compilerOptions": {
+  "compilerOptions": {​​​​​​​
     "outDir": "../out-tsc/e2e",
     "module": "commonjs",
     "target": "es2018",
@@ -10,5 +10,5 @@
       "jasminewd2",
       "node"
     ]
-  }
-}
+  }​​​​​​​
+}​​​​​​​
