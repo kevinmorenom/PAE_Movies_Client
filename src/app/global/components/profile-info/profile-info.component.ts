@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { UserService } from '../../services/user/user.service';
 import { environment } from '../../../../environments/environment';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -16,7 +17,7 @@ export class ProfileInfoComponent implements OnInit {
   url = environment.apiUrl;
   
   watched=[];
-  constructor(private formBuilder: FormBuilder,private userService:UserService) { }
+  constructor(private formBuilder: FormBuilder,private userService:UserService, private router:Router) { }
 
   ngOnInit(): void {
     this.form = this.formBuilder.group({
@@ -46,6 +47,7 @@ export class ProfileInfoComponent implements OnInit {
       console.log(data);
     }).catch(err =>{
       console.log(err);
+      
     } )
     // this.post<any>(this.SERVER_URL, formData).subscribe(
     //   (res) => console.log(res),
@@ -59,6 +61,9 @@ export class ProfileInfoComponent implements OnInit {
       console.log("This is the data:", data)
     }).catch(err => {
       console.log(err);
+      if(err.status == "401") {console.log("redirect register")
+      localStorage.removeItem('token');
+      this.router.navigate(['/'])};
     })
   }
 

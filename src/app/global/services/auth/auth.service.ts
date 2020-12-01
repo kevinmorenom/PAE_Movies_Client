@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { SocketsService } from 'src/app/global/services/sockets/sockets.service';
+import { SocketsService } from '../../../global/services/sockets/sockets.service';
 
 @Injectable({
   providedIn: 'root'
@@ -12,7 +12,7 @@ export class AuthService {
     localStorage.setItem('token' ,data.token);
     this.socket.connect(data.token);
   }
-
+  
   //Obtain the token
   get(){
    return localStorage.getItem('token'); //Not sure if its get or getItem  

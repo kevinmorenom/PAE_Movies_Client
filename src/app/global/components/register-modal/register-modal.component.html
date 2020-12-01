@@ -41,7 +41,14 @@
                         id="exampleInputPassword1" formControlName="confirmPassword">
                 </div>
                 <p *ngIf="form.errors && form.errors.mismatch">Contraseñas no coinciden</p>
-                <button type="submit"  [disabled] = "form.invalid" class="btn btn-primary" id="submitBtn">Register</button>
+                <button type="submit" [disabled]="form.invalid" class="btn btn-primary" id="submitBtn">Register</button>
+                <div *ngIf="register" class="divRegistroExitoso">
+                    <p class="registroExitoso">¡REGISTRO EXITOSO!</p>
+                </div>
+                <div *ngIf="register == false" class="divRegistroExitoso">
+                    <p class="registroExitoso"> YA EXISTE UN USUARIO CON ESE CORREO</p>
+                </div>
+
             </form>
         </div>
     </div>

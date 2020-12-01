@@ -26,6 +26,14 @@
       background-color: #fff;
       border-radius: 25px;
 
+      .divRegistroExitoso {
+        text-align: center;
+        .registroExitoso {
+          font-weight: bold;
+
+        }
+      }
+
       .registerText {
         font-size: 25px;
       }
@@ -42,7 +50,7 @@
         width: 100%;
         margin-bottom: 15px;
         box-shadow: 8px 8px 16px #c2c2c2,
-        -8px -8px 16px #ffffff;
+          -8px -8px 16px #ffffff;
       }
 
       >div {

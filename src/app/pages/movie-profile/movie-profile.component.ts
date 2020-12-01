@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { MoviesService } from '../../global/services/movies/movies.service';
 
 @Component({
@@ -15,7 +15,7 @@ export class MovieProfileComponent implements OnInit {
   // @Input() currentMovie:any;
   MovieId:number;
 
-  constructor(private activatedRoute:ActivatedRoute, private movieService:MoviesService) { 
+  constructor(private activatedRoute:ActivatedRoute, private movieService:MoviesService, private router:Router) { 
     this.activatedRoute.params.subscribe(response=>{
       console.log("Clicked Movie ID",response);
       this.MovieId=response.id;
@@ -38,6 +38,9 @@ export class MovieProfileComponent implements OnInit {
       console.log(data);
     }).catch(err =>{
       console.log(err);
+      if(err.status == "401") {console.log("redirect register")
+      localStorage.removeItem('token');
+      this.router.navigate(['/'])};
     })
   }
   getSimilar(movieId){

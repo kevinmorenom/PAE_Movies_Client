@@ -66,6 +66,9 @@ export class HomeComponent implements OnInit {
       // console.log(data);
     }).catch(err =>{
       console.log(err);
+      if(err.status == "401") {console.log("redirect register")
+      localStorage.removeItem('token');
+      this.router.navigate(['/'])};
     })
   }
 

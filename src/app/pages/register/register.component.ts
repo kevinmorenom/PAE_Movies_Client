@@ -14,6 +14,7 @@ import { SocialAuthService , GoogleLoginProvider} from 'angularx-social-login';
 export class RegisterComponent implements OnInit {
 
   form:FormGroup;
+  loginCredentials: boolean;
 
   loginError:boolean;
 
@@ -49,8 +50,10 @@ export class RegisterComponent implements OnInit {
         this.auth.save(response);
         this.loginError = false;
         this.router.navigate(['/home']);
+        
       }).catch(err =>{
         console.log("Error login in", err);
+        this.loginCredentials = false;
         this.loginError = true;
       })
     }else{

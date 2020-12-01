@@ -10,8 +10,9 @@ import { SessionsService } from '../../services/sessions/sessions.service';
 export class RegisterModalComponent implements OnInit {
 
   form: FormGroup;
+  register: boolean;
 
-  constructor(private formBuilder: FormBuilder, private session:SessionsService) { }
+  constructor(private formBuilder: FormBuilder, private session: SessionsService) { }
 
   ngOnInit(): void {
     this.form = this.formBuilder.group({
@@ -29,18 +30,26 @@ export class RegisterModalComponent implements OnInit {
   createUser() {
     if (this.form.valid) {
       console.log("Crear usuario...")
-      this.session.signUp(this.form.getRawValue()).then().catch(err =>{
+      this.session.signUp(this.form.getRawValue()).then(res => {
+        if (res) {
+          console.log(res);
+          this.register = true;
+        }
+        else this.register = false;
+      }).catch(err => {
         console.log("Error to sign up", err)
+        this.register = false;
       })
     } else {
       console.log("Te faltan datos...");
+      this.register = false;
     }
   }
 
   //Methot to compare passwords in order to confirm validators
   compararPasswords() {
     //If there is no form at all, do nothing
-    if(!this.form) { return; } 
+    if (!this.form) { return; }
     //Compare both passwords
     const values = this.form.getRawValue();
     if (values.contraseña === values.confirmPassword) {
