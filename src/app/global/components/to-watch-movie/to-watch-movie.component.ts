@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
 import { MoviesService } from '../../services/movies/movies.service';
 
 @Component({
@@ -9,6 +9,7 @@ import { MoviesService } from '../../services/movies/movies.service';
 export class ToWatchMovieComponent implements OnInit {
 
   @Input() movie:any;
+  @Output() deletedMovie:EventEmitter<any>= new EventEmitter;
 
   constructor(private movieService:MoviesService) { }
 
@@ -24,6 +25,7 @@ export class ToWatchMovieComponent implements OnInit {
     }).catch(err => {
       console.log(err);
     })
+    this.deletedMovie.emit(movieData);
   }
 
 }
