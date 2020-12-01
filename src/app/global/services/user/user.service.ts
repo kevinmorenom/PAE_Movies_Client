@@ -42,4 +42,13 @@ export class UserService {
     })
     return this.http.get(url ,{ headers:httpHeaders}).toPromise();
   }
+
+  setPassword(password){
+    const url = (`${environment.apiUrl}/user/update`);
+    const httpHeaders=new HttpHeaders({
+      authorization:this.auth.get()
+    })
+    return this.http.put(url, password ,{ headers:httpHeaders}).toPromise();
+  }
+
 }

@@ -1,0 +1,45 @@
+<!-- My profile component -->
+<app-navbar></app-navbar>
+<div class="profileContainer">
+    <div class="profile">
+        <!-- <app-profile-info></app-profile-info>
+        <app-towatch></app-towatch>
+         -->
+        <div class="container">
+            <div class="row">
+                <div class="col-4">
+                    <app-profile-info></app-profile-info>
+                </div>
+                <div class="col-8" id="movieLists">
+                    <div>
+                        <form [formGroup]="form2">
+                            <div class="form-group">
+                                <label>New Password</label>
+                                <input type="password" class="form-control" placeholder="Enter your password"
+                                    id="exampleInputPassword1" formControlName="contraseña">
+                            </div>
+                            <div class="form-group">
+                                <label>Confirm Password</label>
+                                <input type="password" class="form-control" placeholder="Enter your password again"
+                                    id="exampleInputPassword1" formControlName="confirmPassword">
+                            </div>
+                            <p *ngIf="form2.errors && form2.errors.mismatch">Contraseñas no coinciden</p>
+                            <button type="submit" [disabled]="form2.invalid" (click)="setPassword()" class="btn btn-primary"
+                                id="submitBtn">Update Password</button>
+                                <div *ngIf="update == true" class="divRegistroExitoso">
+                                        <p class="registroExitoso"> Update completed!</p>
+                                    </div>
+                        </form>
+                    </div>
+                    <div>
+                        <form [formGroup]="form" enctype="multipart/form-data" class="ppForm" (ngSubmit)="onSubmit()">
+                            <input type="file" name="image" class="inputPP" (change)="onFileChange($event)">
+                            <button class="ppBtn">Upload</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>

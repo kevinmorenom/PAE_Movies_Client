@@ -7,12 +7,14 @@ import { MyProfileComponent } from './pages/my-profile/my-profile.component';
 import { MovieProfileComponent } from './pages/movie-profile/movie-profile.component';
 import {AuthGuard} from './global/guards/auth/auth.guard';
 import {UnAuthGuard} from './global/guards/unAuth/un-auth.guard';
+import { EditInfoComponent } from './pages/edit-info/edit-info.component';
 
 const routes: Routes = [
   { path:'', redirectTo:'register', pathMatch:'full'},
   { path:'register', component: RegisterComponent, canActivate:[UnAuthGuard]},
   { path:'home', component: HomeComponent, canActivate:[AuthGuard]},
   { path:'profile', component: MyProfileComponent, canActivate:[AuthGuard]},
+  { path:'edit', component: EditInfoComponent, canActivate:[AuthGuard]},
   { path:'movie/:id', component: MovieProfileComponent, canActivate:[AuthGuard]},
   { path:'**', component:Page404Component}
 ];

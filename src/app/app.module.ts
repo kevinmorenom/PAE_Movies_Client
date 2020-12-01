@@ -28,6 +28,7 @@ import { environment } from '../environments/environment';
 import { ToastrModule } from 'ngx-toastr';
 
 import { AngularMaterialModule } from './angular-material.module';
+import { EditInfoComponent } from './pages/edit-info/edit-info.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import { AngularMaterialModule } from './angular-material.module';
     ToWatchMovieComponent,
     WatchedComponent,
     NotificationTableComponent,
-    MovieProfileComponent
+    MovieProfileComponent,
+    EditInfoComponent
   ],
   imports: [
     BrowserModule,

@@ -14,7 +14,7 @@
                 <img *ngIf="user" src='{{apiUrl}}/assets/pps/{{user._id}}.jpeg' alt="" class="PP">
             </li>
             <li class="nav-item">
-                <a class="nav-link" routerLink="/profile">User</a>
+                <a class="nav-link" *ngIf="user" routerLink="/profile">{{user.usuario}}</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#" (click)="logOut()">Logout</a>
