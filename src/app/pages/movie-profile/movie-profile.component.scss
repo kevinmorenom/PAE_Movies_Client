@@ -1,136 +1,116 @@
         //My profile style
         .movieProfileContainer {
-          margin-top: 70px;
-          width: 100%;
-          margin-right: 10px;
-          float: left;
-          font-family: 'Heebo';
-
-          .profile {
-            background-color: #fff;
-            width: 90%;
-            margin-left: auto;
-            margin-right: auto;
-            border-radius: 15px;
-            height: 700px;
-            display: table;
-          }
-
-          .poster {
-            text-align: center;
-
-
-            img {
-              border-radius: 15px;
-              margin: 20px;
-              margin-right: 0px;
-              height: 680px;
-              box-shadow: 6px 6px 3px #cccccc, -6px -6px 3px #ffffff;
-            }
-
+            margin-top: 70px;
+            width: 100%;
+            margin-right: 10px;
             float: left;
-            border-radius: 10px;
-            margin-right: 20px;
-          }
-
-          .details {
-            width: 50%;
-            float: left;
-            margin-left: 80px;
-
-            .title {
-              margin-top: 25px;
-              text-align: center;
-              font-family: 'Heebo';
-              font-size: 50px;
+            font-family: 'Heebo';
+            .profile {
+                background-color: #fff;
+                width: 90%;
+                margin-left: auto;
+                margin-right: auto;
+                border-radius: 15px;
+                height: 700px;
+                display: table;
             }
-
-            .data {
-              background-color: lightgrey;
-              width: 100%;
-              box-shadow: 6px 6px 3px #cccccc, -6px -6px 3px #ffffff;
-
-              border-radius: 15px;
-              margin-top: 30px;
-              float: left;
-
-              div {
+            .poster {
+                text-align: center;
+                img {
+                    border-radius: 15px;
+                    margin: 20px;
+                    margin-right: 0px;
+                    height: 680px;
+                    box-shadow: 6px 6px 3px #cccccc, -6px -6px 3px #ffffff;
+                }
+                float: left;
+                border-radius: 10px;
+                margin-right: 20px;
+            }
+            .details {
                 width: 50%;
                 float: left;
-                text-align: center;
-              }
-
-              h4 {
-                font-weight: bold;
-                font-size: 20px;
-              }
+                margin-left: 80px;
+                .title {
+                    margin-top: 25px;
+                    text-align: center;
+                    font-family: 'Heebo';
+                    font-size: 50px;
+                }
+                .data {
+                    // background-color: lightgrey;
+                    width: 100%;
+                    box-shadow: 6px 6px 3px #cccccc, -6px -6px 3px #ffffff;
+                    border-radius: 15px;
+                    margin-top: 30px;
+                    float: left;
+                    div {
+                        width: 50%;
+                        float: left;
+                        text-align: center;
+                    }
+                    h4 {
+                        font-weight: bold;
+                        font-size: 20px;
+                    }
+                }
+                .overview {
+                    margin-top: 120px;
+                    text-align: center;
+                    h4 {
+                        font-weight: bold;
+                        font-size: 20px;
+                    }
+                }
+                .similarText {
+                    margin-top: 100px;
+                    margin-left: 10px;
+                    font-weight: bold;
+                    font-size: 20px;
+                    margin-bottom: 20px;
+                }
+                .similarContainer {
+                    margin-top: 10px;
+                    display: flex;
+                    width: 750px;
+                    font-weight: bold;
+                    .similar {
+                        width: 84%;
+                        margin-left: 40px;
+                        // text-align: center;
+                        // margin-right: auto;
+                        border-radius: 50px;
+                        border-radius: 20px;
+                        box-shadow: 8px 8px 16px #c2c2c2, -8px -8px 16px #ffffff;
+                        height: 225px;
+                        align-items: stretch;
+                        display: flex;
+                        flex-direction: row;
+                        flex-wrap: nowrap;
+                        overflow-x: auto;
+                        overflow-y: hidden;
+                    }
+                    .towatch::-webkit-scrollbar {
+                        display: none;
+                    }
+                    .text {
+                        font-family: 'Heebo';
+                        font-size: 20px;
+                        margin-left: 30px;
+                    }
+                    .similarMovies {
+                        width: 84%;
+                        margin-left: 10px;
+                        text-align: center;
+                        background-color: #fcf9f9;
+                        // margin-right: auto;
+                        border-radius: 50px;
+                        border-radius: 20px;
+                        // box-shadow: 6px 6px 3px #cccccc, -6px -6px 3px #ffffff;
+                        box-shadow: inset 5px 5px 6px rgba(88, 108, 138, 0.24), inset -6px -6px 12px #ffffff;
+                        height: 225px;
+                        ;
+                    }
+                }
             }
-
-            .overview {
-              margin-top: 120px;
-              text-align: center;
-
-              h4 {
-                font-weight: bold;
-                font-size: 20px;
-              }
-            }
-
-            .similarText {
-              margin-top: 100px;
-              margin-left: 10px;
-              font-weight: bold;
-              font-size: 20px;
-              margin-bottom: 20px;
-            }
-
-            .similarContainer {
-              margin-top: 10px;
-              display: flex;
-              width: 750px;
-              font-weight: bold;
-
-              .similar {
-                width: 84%;
-                margin-left: 40px;
-                // text-align: center;
-                // margin-right: auto;
-                border-radius: 50px;
-                border-radius: 20px;
-                box-shadow: 8px 8px 16px #c2c2c2, -8px -8px 16px #ffffff;
-                height: 225px;
-                align-items: stretch;
-                display: flex;
-                flex-direction: row;
-                flex-wrap: nowrap;
-                overflow-x: auto;
-                overflow-y: hidden;
-              }
-
-              .towatch::-webkit-scrollbar {
-                display: none;
-              }
-
-              .text {
-                font-family: 'Heebo';
-                font-size: 20px;
-                margin-left: 30px;
-              }
-
-              .similarMovies {
-                width: 84%;
-                margin-left: 10px;
-                text-align: center;
-                background-color: #fcf9f9;
-                // margin-right: auto;
-                border-radius: 50px;
-                border-radius: 20px;
-                // box-shadow: 6px 6px 3px #cccccc, -6px -6px 3px #ffffff;
-                box-shadow: inset 5px 5px 6px rgba(88, 108, 138, 0.24),
-                  inset -6px -6px 12px #ffffff;
-                height: 225px;
-                ;
-              }
-            }
-          }
         }

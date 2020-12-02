@@ -1,7 +1,7 @@
 <!-- Style profile info -->
 
 <div class="ProfileInfo">
-        <!-- "http://localhost:3001/assets/pps/5fae01212c5fe657176e22d4.jpeg" -->
-<img *ngIf="user" src='{{url}}/assets/pps/{{user._id}}.jpeg' alt="" class="PP">
-<div class="userName"> {{user.firstName}} {{user.lastName}}</div>
+    <!-- "http://localhost:3001/assets/pps/5fae01212c5fe657176e22d4.jpeg" -->
+    <img *ngIf="user" src='{{imgsrc}}' (error)="setDefault()" alt="" class="PP">
+    <div *ngIf="user" class="userName"> {{user.firstName}} {{user.lastName}}</div>
 </div>

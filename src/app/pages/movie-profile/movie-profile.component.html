@@ -23,6 +23,14 @@
                 <h4>Overview</h4>
                 {{currentMovie.overview}}
             </div>
+            <div class="buttons">
+                <button class="btn1" (click)="watched()">
+                    <mat-icon>visibility</mat-icon>
+                </button>
+                <button class="btn2" (click)="toWatch()">
+                    <mat-icon>add_to_queue</mat-icon>
+                </button>
+            </div>
             <div class="similarText" *ngIf="similar">
                 Similar Movies
             </div>
@@ -34,7 +42,7 @@
                 </div>
             </div> -->
             <div class="similarMovieList" *ngIf="similar">
-                <app-watched [movies]="similar" ></app-watched>
+                <app-watched [movies]="similar"></app-watched>
 
             </div>
         </div>

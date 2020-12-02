@@ -13,6 +13,7 @@ export class NavbarComponent implements OnInit {
 
   apiUrl = environment.apiUrl;
   user: any
+  imgsrc:any
 
   constructor(private socket:SocketsService, private userService:UserService, private auth:AuthService, private router:Router) { }
 
@@ -28,6 +29,7 @@ export class NavbarComponent implements OnInit {
   getUser(){
     this.userService.getUserByToken().then(data => {
       this.user = data;
+      this.imgsrc = environment.apiUrl + "/assets/pps/"+this.user._id+".jpeg";
       console.log("This is the data:", data)
     }).catch(err => {
       if(err.status == "401") {console.log("redirect register")
@@ -36,6 +38,14 @@ export class NavbarComponent implements OnInit {
 
       console.log(err);
     })
+  }
+
+  setDefault(){
+    if(this.user.googleId){
+      this.imgsrc = this.user.photoUrl;
+    }else{
+      this.imgsrc = environment.apiUrl + "/assets/pps/defaultpp.png";
+    }
   }
 
 

@@ -79,6 +79,7 @@ export class HomeComponent implements OnInit {
   searchMovie(){
     this.moviesService.searchMovie(this.search).then(data=>{
       this.movies = data;
+      console.log(this.movies);
     }).catch(err => {
       console.log(err);
     })

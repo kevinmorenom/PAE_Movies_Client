@@ -17,7 +17,10 @@
                 <div class="card-group">
                     <div class="card">
                         <div class="imgContainer" (click)="profileMovie(item.id)">
-                            <a routerLink="../movie/{{item.id}}"><img src="http://image.tmdb.org/t/p/original/{{item.poster_path}}" class="card-img-top" alt="..."></a>
+                            <a routerLink="../movie/{{item.id}}">
+                                <img *ngIf="item.poster_path!=null" src="http://image.tmdb.org/t/p/original/{{item.poster_path}}" class="card-img-top" alt="...">
+                                <img *ngIf="item.poster_path==null" src="../../../../assets/defaultPoster.png" class="card-img-top" alt="...">
+                            </a>
                         </div>
                         <hr>
                         <a routerLink="../movie/{{item.id}}" class="card-title" (click)="profileMovie(item)">{{item.original_title}}</a>

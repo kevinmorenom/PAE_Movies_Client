@@ -15,7 +15,7 @@ export class ProfileInfoComponent implements OnInit {
   file: File;
   user: any;
   url = environment.apiUrl;
-  
+  imgsrc: any;
   watched=[];
   constructor(private formBuilder: FormBuilder,private userService:UserService, private router:Router) { }
 
@@ -58,6 +58,7 @@ export class ProfileInfoComponent implements OnInit {
   getUser(){
     this.userService.getUserByToken().then(data => {
       this.user = data;
+      this.imgsrc = environment.apiUrl + "/assets/pps/"+this.user._id+".jpeg";
       console.log("This is the data:", data)
     }).catch(err => {
       console.log(err);
@@ -65,6 +66,14 @@ export class ProfileInfoComponent implements OnInit {
       localStorage.removeItem('token');
       this.router.navigate(['/'])};
     })
+  }
+
+  setDefault(){
+    if(this.user.googleId){
+      this.imgsrc = this.user.photoUrl;
+    }else{
+      this.imgsrc = environment.apiUrl + "/assets/pps/defaultpp.png";
+    }
   }
 
 }
