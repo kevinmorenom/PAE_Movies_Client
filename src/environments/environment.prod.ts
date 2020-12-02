@@ -1,6 +1,6 @@
 export const environment = {
   production: true,
-  apiUrl: 'http://localhost:3001',
+  apiUrl: 'https://pae-movietracker-back.herokuapp.com/',
   clientId: '621493509847-7rfirgkcs99hhrqluv9rlu8b745g86ns.apps.googleusercontent.com',
-  socketUrl: 'http://localhost:3001'
+  socketUrl: 'https://pae-movietracker-back.herokuapp.com/'
 };
