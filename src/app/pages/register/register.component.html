@@ -6,12 +6,9 @@
                 <div *ngIf="loginCredentials == false" class="loginNegativo">
                     <p class="loginNegativo">CREDENCIALES INVALIDAS</p>
                 </div>
-                <input class="form-control mr-sm-2" type="text" placeholder="Email" aria-label="Search" id="inputLogin"
-                    formControlName="correo">
-                <input class="form-control mr-sm-2" type="password" placeholder="Password" aria-label="Search"
-                    id="inputLogin" formControlName="contraseña">
-                <button class="btn btn-outline-success my-2 my-sm-0" id="loginbtn" [disabled]="form.invalid"
-                    type="submit">Login</button>
+                <input class="form-control mr-sm-2" type="text" placeholder="Email" aria-label="Search" id="inputLogin email" formControlName="correo">
+                <input class="form-control mr-sm-2" type="password" placeholder="Password" aria-label="Search" id="inputLogin password" formControlName="contraseña">
+                <button class="btn btn-outline-success my-2 my-sm-0" id="loginbtn" [disabled]="form.invalid" type="submit">Login</button>
                 <button class="btn btn-outline-success my-2 my-sm-0" (click)="googleLogin()">Google</button>
 
             </form>
