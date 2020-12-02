@@ -1,0 +1,78 @@
+.homePage {
+  font-family: 'Heebo';
+}
+
+.homePage #buscarInput {
+  margin-top: 80px;
+  border-radius: 10px;
+  margin-left: 20px;
+  width: 300px;
+  height: 40px;
+  border: none;
+  -webkit-box-shadow: 8px 8px 16px #c2c2c2, -8px -8px 16px #ffffff;
+          box-shadow: 8px 8px 16px #c2c2c2, -8px -8px 16px #ffffff;
+  margin-bottom: 40px;
+}
+
+.homePage .categorySelect {
+  border-radius: 10px;
+  border: none;
+  margin-left: 15px;
+  height: 40px;
+  -webkit-box-shadow: 8px 8px 16px #c2c2c2, -8px -8px 16px #ffffff;
+          box-shadow: 8px 8px 16px #c2c2c2, -8px -8px 16px #ffffff;
+}
+
+.homePage .card-group {
+  width: 280px;
+  border-radius: 15px;
+  margin-left: 0px;
+}
+
+.homePage .card-group .card {
+  border-radius: 15px;
+  -webkit-box-shadow: 8px 8px 16px #c2c2c2, -8px -8px 16px #ffffff;
+          box-shadow: 8px 8px 16px #c2c2c2, -8px -8px 16px #ffffff;
+}
+
+.homePage .card-group .card .imgContainer {
+  text-align: center;
+  background-color: transparent;
+}
+
+.homePage .card-group .card .imgContainer .card-img-top {
+  margin-top: 10px;
+  border-radius: 15px;
+  width: 200px;
+}
+
+.homePage .card-group .card .card-title {
+  text-align: center;
+}
+
+.homePage .card-group .card .card-footer .btn1 {
+  border: none;
+  margin-left: 10px;
+  border-radius: 15px;
+  background-color: #8c9fd3;
+  -webkit-box-shadow: 8px 8px 16px #c2c2c2, -8px -8px 16px #ffffff;
+          box-shadow: 8px 8px 16px #c2c2c2, -8px -8px 16px #ffffff;
+}
+
+.homePage .card-group .card .card-footer .btn2 {
+  margin-left: 150px;
+  border-radius: 15px;
+  border: none;
+  background-color: #8c9fd3;
+  -webkit-box-shadow: 8px 8px 16px #c2c2c2, -8px -8px 16px #ffffff;
+          box-shadow: 8px 8px 16px #c2c2c2, -8px -8px 16px #ffffff;
+}
+
+.homePage .grid > div {
+  height: 450px;
+}
+
+.homePage .grid > div img {
+  width: 100%;
+}
+/*# sourceMappingURL=home.component.css.map */

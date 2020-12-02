@@ -1,0 +1,39 @@
+.ProfileInfo {
+  text-align: center;
+  border-bottom: 1px solid #b3b1b1;
+  margin-top: 100px;
+}
+
+.ProfileInfo .PP {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  height: 300px;
+  border-radius: 25px;
+  -webkit-box-shadow: 8px 8px 16px #c2c2c2, -8px -8px 16px #ffffff;
+          box-shadow: 8px 8px 16px #c2c2c2, -8px -8px 16px #ffffff;
+}
+
+.ProfileInfo .ppForm {
+  margin-top: 20px;
+}
+
+.ProfileInfo .ppForm .ppBtn {
+  border-radius: 5px;
+  border: none;
+  -webkit-box-shadow: 8px 8px 16px #c2c2c2, -8px -8px 16px #ffffff;
+          box-shadow: 8px 8px 16px #c2c2c2, -8px -8px 16px #ffffff;
+  width: 100px;
+  height: 30px;
+}
+
+.ProfileInfo .ppForm .inputPP {
+  border-radius: 5px;
+}
+
+.ProfileInfo .userName {
+  margin-top: 30px;
+  font-family: 'Heebo';
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+/*# sourceMappingURL=profile-info.component.css.map */

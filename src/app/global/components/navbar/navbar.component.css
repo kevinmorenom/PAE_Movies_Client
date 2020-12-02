@@ -1,0 +1,23 @@
+#navBar {
+  font-family: 'Heebo';
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+#navBar #Titulo {
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+#navBar #navBar-btns {
+  margin-left: 1080px;
+}
+
+#navBar #navBar-btns .PP {
+  height: 30px;
+  margin-top: 5px;
+  border-radius: 50px;
+  margin-right: 5px;
+}
+/*# sourceMappingURL=navbar.component.css.map */

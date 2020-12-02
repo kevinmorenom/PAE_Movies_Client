@@ -1,0 +1,44 @@
+.card-group {
+  width: 300px;
+  border-radius: 15px;
+  margin-left: 20px;
+}
+
+.card-group .card {
+  border-radius: 15px;
+  -webkit-box-shadow: 8px 8px 16px #c2c2c2, -8px -8px 16px #ffffff;
+          box-shadow: 8px 8px 16px #c2c2c2, -8px -8px 16px #ffffff;
+}
+
+.card-group .card .imgContainer {
+  text-align: center;
+  background-color: transparent;
+}
+
+.card-group .card .imgContainer .card-img-top {
+  margin-top: 10px;
+  border-radius: 15px;
+  width: 200px;
+}
+
+.card-group .card .card-title {
+  text-align: center;
+}
+
+.card-group .card .card-footer .btn1 {
+  border: none;
+  border-radius: 15px;
+  background-color: #8c9fd3;
+  -webkit-box-shadow: 8px 8px 16px #c2c2c2, -8px -8px 16px #ffffff;
+          box-shadow: 8px 8px 16px #c2c2c2, -8px -8px 16px #ffffff;
+}
+
+.card-group .card .card-footer .btn2 {
+  margin-left: 100px;
+  border-radius: 15px;
+  border: none;
+  background-color: #8c9fd3;
+  -webkit-box-shadow: 8px 8px 16px #c2c2c2, -8px -8px 16px #ffffff;
+          box-shadow: 8px 8px 16px #c2c2c2, -8px -8px 16px #ffffff;
+}
+/*# sourceMappingURL=movie-card.component.css.map */

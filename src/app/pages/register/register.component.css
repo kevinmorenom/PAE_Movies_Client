@@ -1,0 +1,29 @@
+#NavBar {
+  font-family: 'Heebo';
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+#NavBar #Titulo {
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+#NavBar #loginBtns {
+  margin-left: 400px;
+  display: inline;
+}
+
+#NavBar #loginBtns .loginNegativo {
+  color: white;
+}
+
+#NavBar #loginBtns #formLogin {
+  display: inline;
+}
+
+#NavBar #loginBtns #inputLogin {
+  width: 310px;
+}
+/*# sourceMappingURL=register.component.css.map */

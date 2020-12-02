@@ -1,0 +1,43 @@
+.watchedContainer {
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 1350px;
+}
+
+.watchedContainer .text {
+  font-family: 'Heebo';
+  font-size: 20px;
+  margin-left: 30px;
+}
+
+.watchedContainer .watched {
+  text-align: center;
+  width: 51%;
+  margin-left: 40px;
+  border-radius: 50px;
+  border-radius: 20px;
+  -webkit-box-shadow: 8px 8px 16px #c2c2c2, -8px -8px 16px #ffffff;
+          box-shadow: 8px 8px 16px #c2c2c2, -8px -8px 16px #ffffff;
+  height: 225px;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.watchedContainer .watched::-webkit-scrollbar {
+  display: none;
+}
+/*# sourceMappingURL=watched.component.css.map */

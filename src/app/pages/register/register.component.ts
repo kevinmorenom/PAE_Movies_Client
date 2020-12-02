@@ -49,6 +49,7 @@ export class RegisterComponent implements OnInit {
         //We make pass the response to the auth service which has a methof of save that takes that reponse (the token) and saves it in local Storage
         this.auth.save(response);
         this.loginError = false;
+        this.loginCredentials = true;
         this.router.navigate(['/home']);
         
       }).catch(err =>{

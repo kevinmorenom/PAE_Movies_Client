@@ -1,41 +1,49 @@
 <!-- Home page -->
-<app-navbar></app-navbar>
-<div class="homePage">
-    <input type="text" [(ngModel)]="search" placeholder=" Buscar película" id="buscarInput" (change)='searchMovie()'>
+<div>
+    <app-navbar></app-navbar>
+    <div class="homePage" title="logged">
+        <input type="text" [(ngModel)]="search" placeholder=" Buscar película" id="buscarInput"
+            (change)='searchMovie()'>
 
-    <select name="" class="categorySelect" id="" [(ngModel)]="category" placeholder='Category' (change)="getCategory()">
+        <select name="" class="categorySelect" id="" [(ngModel)]="category" placeholder='Category'
+            (change)="getCategory()">
             <option value="" class="optionCategory">Categorías</option>
             <option value="popular">popular</option>
             <option value="top_rated">top_rated</option>
             <option value="upcoming">upcoming</option>
         </select>
-
-    <div>
-        <!-- <app-movie-card></app-movie-card> -->
-        <div class="grid" id="#news-container">
-            <div class="sm-50 md-20" *ngFor="let item of movies">
-                <div class="card-group">
-                    <div class="card">
-                        <div class="imgContainer" (click)="profileMovie(item.id)">
-                            <a routerLink="../movie/{{item.id}}">
-                                <img *ngIf="item.poster_path!=null" src="http://image.tmdb.org/t/p/original/{{item.poster_path}}" class="card-img-top" alt="...">
-                                <img *ngIf="item.poster_path==null" src="../../../../assets/defaultPoster.png" class="card-img-top" alt="...">
-                            </a>
-                        </div>
-                        <hr>
-                        <a routerLink="../movie/{{item.id}}" class="card-title" (click)="profileMovie(item)">{{item.original_title}}</a>
-                        <div class="card-footer">
-                            <button class="btn1" (click)="watched(item)">
-                                <mat-icon>visibility</mat-icon>
-                            </button>
-                            <button class="btn2" (click)="toWatch(item)">
-                                <mat-icon>add_to_queue</mat-icon>
-                            </button>
+        <!-- <button class="profile" [routerLink]="['/profile']" >profile</button> -->
+        <div>
+            <!-- <app-movie-card></app-movie-card> -->
+            <div class="grid" id="#news-container">
+                <div class="sm-50 md-20" *ngFor="let item of movies">
+                    <div class="card-group">
+                        <div class="card">
+                            <div class="imgContainer" (click)="profileMovie(item.id)">
+                                <a routerLink="../movie/{{item.id}}" id='aCard'>
+                                    <img *ngIf="item.poster_path!=null"
+                                        src="http://image.tmdb.org/t/p/original/{{item.poster_path}}"
+                                        class="card-img-top" alt="...">
+                                    <img *ngIf="item.poster_path==null" src="../../../../assets/defaultPoster.png"
+                                        class="card-img-top"  alt="...">
+                                </a>
+                            </div>
+                            <hr>
+                            <a routerLink="../movie/{{item.id}}" class="card-title"
+                                (click)="profileMovie(item)">{{item.original_title}}</a>
+                            <div class="card-footer">
+                                <button class="btn1" (click)="watched(item)">
+                                    <mat-icon>visibility</mat-icon>
+                                </button>
+                                <button class="btn2" (click)="toWatch(item)">
+                                    <mat-icon>add_to_queue</mat-icon>
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <app-footer></app-footer>
 </div>
-<app-footer></app-footer>

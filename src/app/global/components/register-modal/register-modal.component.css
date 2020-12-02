@@ -1,0 +1,59 @@
+.container {
+  font-family: 'Heebo';
+  margin-top: 100px;
+}
+
+.container #registerContent {
+  margin-top: 60px;
+}
+
+.container #registerContent #Texts {
+  margin-top: 150px;
+}
+
+.container #registerContent .BigText {
+  font-size: 30px;
+}
+
+.container #registerContent .SmallText {
+  font-size: 18px;
+}
+
+.container #registerContent #registerContainer {
+  -webkit-box-shadow: 8px 8px 16px #c2c2c2, -8px -8px 16px #ffffff;
+          box-shadow: 8px 8px 16px #c2c2c2, -8px -8px 16px #ffffff;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 25px;
+}
+
+.container #registerContent #registerContainer .divRegistroExitoso {
+  text-align: center;
+}
+
+.container #registerContent #registerContainer .divRegistroExitoso .registroExitoso {
+  font-weight: bold;
+}
+
+.container #registerContent #registerContainer .registerText {
+  font-size: 25px;
+}
+
+.container #registerContent #registerContainer .form-group input {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 5px 5px 6px rgba(88, 108, 138, 0.24), inset -6px -6px 12px #ffffff;
+          box-shadow: inset 5px 5px 6px rgba(88, 108, 138, 0.24), inset -6px -6px 12px #ffffff;
+  border: none;
+}
+
+.container #registerContent #registerContainer #submitBtn {
+  width: 100%;
+  margin-bottom: 15px;
+  -webkit-box-shadow: 8px 8px 16px #c2c2c2, -8px -8px 16px #ffffff;
+          box-shadow: 8px 8px 16px #c2c2c2, -8px -8px 16px #ffffff;
+}
+
+.container #registerContent #registerContainer > div {
+  text-align: center;
+}
+/*# sourceMappingURL=register-modal.component.css.map */

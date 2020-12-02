@@ -1,0 +1,160 @@
+.movieProfileContainer {
+  margin-top: 70px;
+  width: 100%;
+  margin-right: 10px;
+  float: left;
+  font-family: 'Heebo';
+}
+
+.movieProfileContainer .profile {
+  background-color: #fff;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 15px;
+  height: 700px;
+  display: table;
+}
+
+.movieProfileContainer .poster {
+  text-align: center;
+  float: left;
+  border-radius: 10px;
+  margin-right: 20px;
+}
+
+.movieProfileContainer .poster img {
+  border-radius: 15px;
+  margin: 20px;
+  margin-right: 0px;
+  height: 680px;
+  -webkit-box-shadow: 6px 6px 3px #cccccc, -6px -6px 3px #ffffff;
+          box-shadow: 6px 6px 3px #cccccc, -6px -6px 3px #ffffff;
+}
+
+.movieProfileContainer .details {
+  width: 50%;
+  float: left;
+  margin-left: 80px;
+}
+
+.movieProfileContainer .details .buttons {
+  margin-top: 20px;
+}
+
+.movieProfileContainer .details .buttons .btn1 {
+  margin-left: 150px;
+  border-radius: 15px;
+  background-color: #8c9fd3;
+  -webkit-box-shadow: 8px 8px 16px #c2c2c2, -8px -8px 16px #ffffff;
+          box-shadow: 8px 8px 16px #c2c2c2, -8px -8px 16px #ffffff;
+}
+
+.movieProfileContainer .details .buttons .btn2 {
+  margin-left: 400px;
+  border-radius: 15px;
+  background-color: #8c9fd3;
+  -webkit-box-shadow: 8px 8px 16px #c2c2c2, -8px -8px 16px #ffffff;
+          box-shadow: 8px 8px 16px #c2c2c2, -8px -8px 16px #ffffff;
+}
+
+.movieProfileContainer .details .title {
+  margin-top: 25px;
+  text-align: center;
+  font-family: 'Heebo';
+  font-size: 50px;
+}
+
+.movieProfileContainer .details .data {
+  width: 100%;
+  -webkit-box-shadow: 6px 6px 3px #cccccc, -6px -6px 3px #ffffff;
+          box-shadow: 6px 6px 3px #cccccc, -6px -6px 3px #ffffff;
+  border-radius: 15px;
+  margin-top: 30px;
+  float: left;
+}
+
+.movieProfileContainer .details .data div {
+  width: 50%;
+  float: left;
+  text-align: center;
+}
+
+.movieProfileContainer .details .data h4 {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.movieProfileContainer .details .overview {
+  margin-top: 120px;
+  text-align: center;
+}
+
+.movieProfileContainer .details .overview h4 {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.movieProfileContainer .details .similarText {
+  margin-top: 60px;
+  margin-left: 10px;
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.movieProfileContainer .details .similarContainer {
+  margin-top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 750px;
+  font-weight: bold;
+}
+
+.movieProfileContainer .details .similarContainer .similar {
+  width: 84%;
+  margin-left: 40px;
+  border-radius: 50px;
+  border-radius: 20px;
+  -webkit-box-shadow: 8px 8px 16px #c2c2c2, -8px -8px 16px #ffffff;
+          box-shadow: 8px 8px 16px #c2c2c2, -8px -8px 16px #ffffff;
+  height: 225px;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.movieProfileContainer .details .similarContainer .towatch::-webkit-scrollbar {
+  display: none;
+}
+
+.movieProfileContainer .details .similarContainer .text {
+  font-family: 'Heebo';
+  font-size: 20px;
+  margin-left: 30px;
+}
+
+.movieProfileContainer .details .similarContainer .similarMovies {
+  width: 84%;
+  margin-left: 10px;
+  text-align: center;
+  background-color: #fcf9f9;
+  border-radius: 50px;
+  border-radius: 20px;
+  -webkit-box-shadow: inset 5px 5px 6px rgba(88, 108, 138, 0.24), inset -6px -6px 12px #ffffff;
+          box-shadow: inset 5px 5px 6px rgba(88, 108, 138, 0.24), inset -6px -6px 12px #ffffff;
+  height: 225px;
+}
+/*# sourceMappingURL=movie-profile.component.css.map */
