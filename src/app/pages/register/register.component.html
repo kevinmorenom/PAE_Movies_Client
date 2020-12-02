@@ -4,7 +4,7 @@
         <div class="collapse navbar-collapse" id="loginBtns">
             <form [formGroup]="form" class="form-inline my-2 my-lg-0" id="formLogin" (submit)="login()">
                 <div *ngIf="loginCredentials == false" class="loginNegativo">
-                    <p class="loginNegativo">CREDENCIALES INVALIDAS</p>
+                    <p class="loginNegativo" id="loginNegativo">CREDENCIALES INVALIDAS</p>
                 </div>
                 <input class="form-control mr-sm-2" type="text" placeholder="Email" aria-label="Search" id="inputLogin email" formControlName="correo">
                 <input class="form-control mr-sm-2" type="password" placeholder="Password" aria-label="Search" id="inputLogin password" formControlName="contraseña">

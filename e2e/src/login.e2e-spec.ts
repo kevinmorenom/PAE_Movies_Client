@@ -11,18 +11,17 @@ describe('Login Test', () => {
   it('It should show the login error', () => {
     page.navigateTo();
 
-    const emailInput=element(by.id('email'));
-    const passwordInput=element(by.id('password'));
-    const submitBtn=element(by.id('logibntn'));
+    const emailInput=element(by.id('inputLogin email'));
+    const passwordInput=element(by.id('inputLogin password'));
+    const submitBtn=element(by.id('loginbtn'));
 
     emailInput.sendKeys('Alex@iteso.mx');
-    passwordInput.sendKeys('1222121');
+    passwordInput.sendKeys('123453');
 
     submitBtn.click();
 
-    let message;
+    let message = element(by.id('loginNegativo'));
     browser.wait(()=>{
-        message= element(by.className('loginNegativo'));
         return message.getText();
     },6000);
     expect(message.getText()).toEqual('CREDENCIALES INVALIDAS');
