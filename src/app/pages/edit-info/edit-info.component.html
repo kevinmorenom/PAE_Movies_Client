@@ -9,9 +9,10 @@
             <div class="row">
                 <div class="col-4">
                     <app-profile-info></app-profile-info>
+                    <button [routerLink]="['/profile']" class="backbtn" >Back to profile </button>
                 </div>
                 <div class="col-8" id="movieLists">
-                    <div>
+                    <div class="form2">
                         <form [formGroup]="form2">
                             <div class="form-group">
                                 <label>New Password</label>
@@ -31,10 +32,10 @@
                                     </div>
                         </form>
                     </div>
-                    <div>
+                    <div class="imageChange">
                         <form [formGroup]="form" enctype="multipart/form-data" class="ppForm" (ngSubmit)="onSubmit()">
                             <input type="file" name="image" class="inputPP" (change)="onFileChange($event)">
-                            <button class="ppBtn">Upload</button>
+                            <button class="btn btn-primary">Upload</button>
                         </form>
                     </div>
                 </div>

@@ -9,10 +9,26 @@
         margin-right: auto;
         border-radius: 15px;
         height: 700px;
+        
+        .backbtn{
+            margin-top: 20px;
+            margin-left: 70px;
+            border: none;
+            height: 40px;
+            width: 200px;
+            border-radius: 10px;
+            box-shadow: 6px 6px 3px #cccccc, -6px -6px 3px #ffffff;
+
+        }
         #movieLists{
-            margin-top: 70px;
+            margin-top: 180px;
             .watchedMovies{
                 margin-bottom: 20px;
+            }
+
+            .imageChange{
+                margin-top: 50px;
+                margin-bottom: 200px;
             }
             .ListM{
                 font-weight: bold;
